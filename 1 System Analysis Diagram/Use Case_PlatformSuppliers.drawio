@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-05-20T20:53:33.870Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="Du3kdwKzAxcDZqrpZ9uu" version="20.4.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-05-20T20:56:56.354Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="Jh65RiBNwz5dIKP2mq5m" version="20.4.0" type="github">
   <diagram id="nJC5CbtD6ITVbMb1Q73q" name="Page-1">
-    <mxGraphModel dx="1266" dy="542" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="844" dy="361" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -22,16 +22,16 @@
         <mxCell id="otnVlE3y3-r2m2NQ43wk-2" value="suppliers" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" parent="1" vertex="1">
           <mxGeometry x="710" y="160" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="otnVlE3y3-r2m2NQ43wk-5" value="register suppliers account" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="otnVlE3y3-r2m2NQ43wk-5" value="register account" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="80" width="120" height="80" as="geometry" />
         </mxCell>
         <mxCell id="otnVlE3y3-r2m2NQ43wk-6" value="upload products" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="200" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="otnVlE3y3-r2m2NQ43wk-7" value="approved product" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="otnVlE3y3-r2m2NQ43wk-7" value="approved products" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="320" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="otnVlE3y3-r2m2NQ43wk-9" value="update product info" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+        <mxCell id="otnVlE3y3-r2m2NQ43wk-9" value="update products info" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="350" y="430" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
