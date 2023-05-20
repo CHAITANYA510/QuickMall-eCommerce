@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-20T22:24:27.228Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="iDFP15eLBGoLMyk3RNcF" version="20.4.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-05-20T22:26:07.451Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="dmC6adqvLqOsj_TMLSLK" version="20.4.0" type="github" pages="2">
   <diagram id="nJC5CbtD6ITVbMb1Q73q" name="Use Case">
     <mxGraphModel dx="1407" dy="602" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -65,7 +65,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8WiM7awgASSFZqjmYkqC" name="PlatformProduct_Sys">
-    <mxGraphModel dx="873" dy="374" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1688" dy="723" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -225,6 +225,15 @@
         </mxCell>
         <mxCell id="8fuKoQOsYQC5Oq5qR4_i-63" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
           <mxGeometry x="1005" y="1274.9999999999998" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="8fuKoQOsYQC5Oq5qR4_i-68" value="Vertical Container" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="390" height="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="8fuKoQOsYQC5Oq5qR4_i-69" value="Vertical Container" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="450" y="200" width="390" height="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="8fuKoQOsYQC5Oq5qR4_i-70" value="Vertical Container" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="840" y="200" width="390" height="1140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
