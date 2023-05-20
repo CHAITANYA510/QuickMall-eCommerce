@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-20T22:26:24.328Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="YdrxytBi3Q_sdJYhJQV4" version="20.4.0" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2023-05-20T22:26:51.479Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="VYhZiD7x5tjQykScapqS" version="20.4.0" type="github" pages="2">
   <diagram id="nJC5CbtD6ITVbMb1Q73q" name="Use Case">
     <mxGraphModel dx="1407" dy="602" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -56,10 +56,10 @@
           <mxGeometry x="710" y="640" width="30" height="60" as="geometry" />
         </mxCell>
         <mxCell id="D7RnyqrD7TSsdvKjuRl5-4" value="order products" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="570" width="120" height="80" as="geometry" />
+          <mxGeometry x="340" y="590" width="120" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="D7RnyqrD7TSsdvKjuRl5-6" value="make payments" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="340" y="690" width="120" height="80" as="geometry" />
+        <mxCell id="D7RnyqrD7TSsdvKjuRl5-6" value="make payments (delete)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="680" width="120" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
