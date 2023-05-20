@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-20T22:54:27.782Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="IQwaa86XrTIIcH5-Zdok" version="20.4.0" type="github" pages="3">
+<mxfile host="app.diagrams.net" modified="2023-05-20T22:56:32.122Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="L6A9uO1DhtSO0GLEglHr" version="20.4.0" type="github" pages="3">
   <diagram id="nJC5CbtD6ITVbMb1Q73q" name="Use Case">
     <mxGraphModel dx="1407" dy="1702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -275,11 +275,20 @@
         <mxCell id="KLiT7YvcpH8t8QayQ7co-15" value="Approved Product &lt;br&gt;and Set its price" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="260" y="125" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="KLiT7YvcpH8t8QayQ7co-17" value="Products sells status change to: can be selled" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="KLiT7YvcpH8t8QayQ7co-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="KLiT7YvcpH8t8QayQ7co-17" target="KLiT7YvcpH8t8QayQ7co-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KLiT7YvcpH8t8QayQ7co-17" value="Products inventory change" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="130" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="KLiT7YvcpH8t8QayQ7co-19" value="Add Inventory" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="500" y="130" width="100" height="30" as="geometry" />
+          <mxGeometry x="500" y="135" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="KLiT7YvcpH8t8QayQ7co-22" value="Product Order Status change and generate order" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="KLiT7YvcpH8t8QayQ7co-25" value="Producted Ordered" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="710" y="135" width="130" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
