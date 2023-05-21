@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-21T00:49:17.565Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="Z6SNSId1hvZXRakB_YNF" version="20.4.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-05-21T00:49:21.518Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="Z7I4aFm2DwI81EoGQfOf" version="20.4.0" type="github" pages="5">
   <diagram id="nJC5CbtD6ITVbMb1Q73q" name="Use Case">
     <mxGraphModel dx="2302" dy="2085" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -70,7 +70,7 @@
         <mxCell id="K-6xyPZleu_d55klcX2H-1" value="PlatformSupplierSys" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="210" y="-105" width="140" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="K-6xyPZleu_d55klcX2H-4" value="e-commerce Sys" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="K-6xyPZleu_d55klcX2H-4" value="e-commerce Sys" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" vertex="1" parent="1">
           <mxGeometry x="210" y="790" width="110" height="30" as="geometry" />
         </mxCell>
       </root>
