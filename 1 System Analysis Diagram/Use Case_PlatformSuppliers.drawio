@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-20T23:20:47.273Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="IMHOjdwTerP6FLhNLWXm" version="20.4.0" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2023-05-21T00:10:20.601Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="7fY-fYlRRQDNtJZqxmj8" version="20.4.0" type="github" pages="4">
   <diagram id="nJC5CbtD6ITVbMb1Q73q" name="Use Case">
     <mxGraphModel dx="1407" dy="1702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -71,7 +71,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="8WiM7awgASSFZqjmYkqC" name="Activity Diagram">
-    <mxGraphModel dx="1948" dy="834" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1101" dy="471" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -294,10 +294,31 @@
     </mxGraphModel>
   </diagram>
   <diagram id="ZQGA7ipY6BzPH2nBvvBg" name="Sequence Diagram">
-    <mxGraphModel dx="1266" dy="542" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1809" dy="774" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Bt_NXFMtj_O8qIiYBkgm-3" value="System" style="html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="90" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Bt_NXFMtj_O8qIiYBkgm-6" value="" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="130" y="90" width="20" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="Bt_NXFMtj_O8qIiYBkgm-7" value="Supplier" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="105" y="125" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oMuf4dUYnpR0nw3m816d-2" value="Admin" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="340" y="90" width="20" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWDoqCt1mp4E6cCGt5W-1" value="User" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;collapsible=0;recursiveResize=0;verticalAlign=top;spacingTop=36;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="780" y="90" width="20" height="740" as="geometry" />
+        </mxCell>
+        <mxCell id="HDWDoqCt1mp4E6cCGt5W-4" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Bt_NXFMtj_O8qIiYBkgm-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="110" as="sourcePoint" />
+            <mxPoint x="575" y="830" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
