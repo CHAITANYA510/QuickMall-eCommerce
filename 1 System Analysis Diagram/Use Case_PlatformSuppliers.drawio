@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-05-21T00:44:12.877Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="Anrk-QSyxpCchOPDFqGm" version="20.4.0" type="github" pages="5">
+<mxfile host="app.diagrams.net" modified="2023-05-21T00:44:35.069Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="8YhFDQsvku7_uIUpl_R_" version="20.4.0" type="github" pages="5">
   <diagram id="nJC5CbtD6ITVbMb1Q73q" name="Use Case">
     <mxGraphModel dx="1407" dy="1702" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -309,7 +309,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="ZQGA7ipY6BzPH2nBvvBg" name="Sequence Diagram">
-    <mxGraphModel dx="723" dy="310" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1489" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -355,7 +355,7 @@
         <mxCell id="HDWDoqCt1mp4E6cCGt5W-4" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;startArrow=none;" edge="1" parent="1" source="UilYgUZKtVuJQKvuDIJA-20">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="520" y="235" as="sourcePoint" />
-            <mxPoint x="575" y="1047" as="targetPoint" />
+            <mxPoint x="575" y="1010" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="Ul8v0UfivBPth89PFnOR-11" value="&lt;span style=&quot;font-size: 12px; background-color: rgb(248, 249, 250);&quot;&gt;createSuppliersAccount()&lt;/span&gt;" style="html=1;verticalAlign=bottom;endArrow=block;entryX=0;entryY=0;rounded=0;" edge="1" target="Ul8v0UfivBPth89PFnOR-10" parent="1">
