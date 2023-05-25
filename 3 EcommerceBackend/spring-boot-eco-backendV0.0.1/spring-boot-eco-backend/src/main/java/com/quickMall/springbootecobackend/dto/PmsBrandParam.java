@@ -1,13 +1,15 @@
 package com.quickMall.springbootecobackend.dto;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 
 @Data
-@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Entity
+@EqualsAndHashCode
 public class PmsBrandParam {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
