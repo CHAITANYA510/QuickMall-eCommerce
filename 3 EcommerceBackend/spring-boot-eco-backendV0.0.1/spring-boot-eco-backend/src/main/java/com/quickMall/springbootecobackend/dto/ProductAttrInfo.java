@@ -13,7 +13,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity
 
 public class ProductAttrInfo {
 
