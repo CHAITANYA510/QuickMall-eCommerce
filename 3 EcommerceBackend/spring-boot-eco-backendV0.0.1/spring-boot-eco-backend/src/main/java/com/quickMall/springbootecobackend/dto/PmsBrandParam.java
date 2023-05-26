@@ -8,7 +8,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity
 @EqualsAndHashCode
 public class PmsBrandParam {
     @Id

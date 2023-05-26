@@ -10,7 +10,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity
+
 public class PmsProductAttributeParam {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
