@@ -6,10 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -18,6 +15,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @ToString
 @Entity
+@Builder
+
 public class PmsCategory implements Serializable {
 
     private static final long serialVersionUID = 1L;

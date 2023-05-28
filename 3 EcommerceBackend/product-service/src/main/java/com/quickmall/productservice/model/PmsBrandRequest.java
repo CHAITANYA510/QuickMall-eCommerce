@@ -8,7 +8,7 @@ import lombok.*;
 @ToString
 @Builder
 
-public class PmsBrandResponse {
+public class PmsBrandRequest {
 
     private Long brandId;
 
