@@ -47,5 +47,6 @@ public class PmsSpuResponse {
      */
     private PublishStatus publishStatus;
 
+    private BigDecimal price;
 
 }

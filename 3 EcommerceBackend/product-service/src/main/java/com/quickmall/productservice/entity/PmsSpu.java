@@ -50,5 +50,6 @@ public class PmsSpu implements Serializable {
      */
     private PublishStatus publishStatus;
 
+    private BigDecimal price;
 
 }

@@ -12,6 +12,7 @@ import java.util.Date;
 @AllArgsConstructor
 @ToString
 @Builder
+
 public class PmsSpuRequest {
 
     private Long spuId;
@@ -42,5 +43,6 @@ public class PmsSpuRequest {
      */
     private PublishStatus publishStatus;
 
+    private BigDecimal price;
 
 }

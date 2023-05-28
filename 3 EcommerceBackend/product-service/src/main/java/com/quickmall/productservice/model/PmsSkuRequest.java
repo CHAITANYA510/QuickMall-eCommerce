@@ -1,8 +1,10 @@
 package com.quickmall.productservice.model;
 
+import com.quickmall.productservice.constant.ApprovedStatus;
 import lombok.*;
 
 import java.math.BigDecimal;
+import java.util.Date;
 
 @Data
 @NoArgsConstructor
@@ -33,5 +35,19 @@ public class PmsSkuRequest {
     private BigDecimal price;
 
     private Long saleCount;
+
+    /**
+     * the stock number of sku product
+     * new skuStock = old skuStock - sales
+     */
+    private Integer skuStock;
+
+    private Date createTime;
+
+    /**
+     * sku approved status: APPROVED; DECLINED
+     */
+    private ApprovedStatus skuApproveStatus;
+
 
 }

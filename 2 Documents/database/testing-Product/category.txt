@@ -1,0 +1,90 @@
+[
+    {
+        "categoryId": 1,
+        "categoryName": "IT",
+        "parentId": 0,
+        "categoryLevel": null,
+        "showStatus": null,
+        "sort": null,
+        "icon": null,
+        "productUnit": null,
+        "productCount": null
+    },
+    {
+        "categoryId": 2,
+        "categoryName": "Cloth",
+        "parentId": 0,
+        "categoryLevel": null,
+        "showStatus": null,
+        "sort": null,
+        "icon": null,
+        "productUnit": null,
+        "productCount": null
+    },
+    {
+        "categoryId": 3,
+        "categoryName": "dress",
+        "parentId": 1,
+        "categoryLevel": null,
+        "showStatus": null,
+        "sort": null,
+        "icon": null,
+        "productUnit": null,
+        "productCount": null
+    },
+    {
+        "categoryId": 4,
+        "categoryName": "Phone",
+        "parentId": 0,
+        "categoryLevel": null,
+        "showStatus": null,
+        "sort": null,
+        "icon": null,
+        "productUnit": null,
+        "productCount": null
+    },
+    {
+        "categoryId": 6,
+        "categoryName": "Foods & Drinks",
+        "parentId": 0,
+        "categoryLevel": null,
+        "showStatus": null,
+        "sort": null,
+        "icon": null,
+        "productUnit": null,
+        "productCount": null
+    },
+    {
+        "categoryId": 7,
+        "categoryName": "Foods",
+        "parentId": 6,
+        "categoryLevel": null,
+        "showStatus": null,
+        "sort": null,
+        "icon": null,
+        "productUnit": null,
+        "productCount": null
+    },
+    {
+        "categoryId": 8,
+        "categoryName": "Drinks",
+        "parentId": 6,
+        "categoryLevel": null,
+        "showStatus": null,
+        "sort": null,
+        "icon": null,
+        "productUnit": null,
+        "productCount": null
+    },
+    {
+        "categoryId": 9,
+        "categoryName": "Fast Fashion",
+        "parentId": 2,
+        "categoryLevel": null,
+        "showStatus": null,
+        "sort": null,
+        "icon": null,
+        "productUnit": null,
+        "productCount": null
+    }
+]
