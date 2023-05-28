@@ -38,6 +38,7 @@ public class SpuServiceImpl implements SpuService {
                 .updateTime(new Date())
                 .spuApprovedStatus(pmsSpuRequest.getSpuApprovedStatus())
                 .publishStatus(pmsSpuRequest.getPublishStatus())
+                .price(pmsSpuRequest.getPrice())
                 .build();
 
         spuRepository.save(pmsSpu);

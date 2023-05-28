@@ -10,6 +10,7 @@ import com.quickmall.productservice.serivce.SkuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 import static org.springframework.beans.BeanUtils.copyProperties;
@@ -32,6 +33,9 @@ public class SkuServiceImpl implements SkuService {
                 .skuTitle(skuRequest.getSkuTitle())
                 .price(skuRequest.getPrice())
                 .saleCount(skuRequest.getSaleCount())
+                .skuStock(skuRequest.getSkuStock())
+                .createTime(new Date())
+                .skuApproveStatus(skuRequest.getSkuApproveStatus())
                 .build();
 
         skuRepository.save(pmsSku);

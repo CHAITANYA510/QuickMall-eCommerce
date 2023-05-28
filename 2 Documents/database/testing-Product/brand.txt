@@ -1,0 +1,128 @@
+[
+    {
+        "brandId": 1,
+        "brandName": "TEMU",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 2,
+        "brandName": "SHEIN",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 3,
+        "brandName": "APPLE",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 4,
+        "brandName": "Amazon",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 5,
+        "brandName": "Samsung",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 6,
+        "brandName": "PingDuoDuo",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 7,
+        "brandName": "TaoBao",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 8,
+        "brandName": "Oppo",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 9,
+        "brandName": "Zara",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 10,
+        "brandName": "GAP",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 11,
+        "brandName": "Stabucks",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 12,
+        "brandName": "Dunkin",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 13,
+        "brandName": "Costa",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    },
+    {
+        "brandId": 14,
+        "brandName": "McDonald's",
+        "logo": null,
+        "description": null,
+        "showStatus": null,
+        "firstLetter": null,
+        "sort": null
+    }
+]

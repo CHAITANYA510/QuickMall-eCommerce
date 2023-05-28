@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/skuInfo")
+@RequestMapping("/api/v1/sku")
 @RestController
 @Log4j2
 @Api(tags = "SkuInfo")
