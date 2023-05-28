@@ -10,8 +10,8 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(SpuServiceException.class)
-    public ResponseEntity<ErrorResponse> handelSpuServiceException(SpuServiceException exception) {
+    @ExceptionHandler(BasicServiceException.class)
+    public ResponseEntity<ErrorResponse> handelSpuServiceException(BasicServiceException exception) {
         ErrorResponse errorResponse = ErrorResponse.builder()
                 .errorMessage(exception.getMessage())
                 .errorCode(exception.getStatusCode())

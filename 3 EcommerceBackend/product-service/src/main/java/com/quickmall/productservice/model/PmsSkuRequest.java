@@ -1,25 +1,17 @@
-package com.quickmall.productservice.entity;
-
-import javax.persistence.*;
+package com.quickmall.productservice.model;
 
 import lombok.*;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity
 @Builder
 
-public class PmsSku implements Serializable {
+public class PmsSkuRequest {
 
-    private static final long serialVersionUID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long skuId;
 
     private Long spuId;

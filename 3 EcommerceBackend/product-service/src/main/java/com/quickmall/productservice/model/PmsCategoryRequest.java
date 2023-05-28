@@ -3,19 +3,13 @@ package com.quickmall.productservice.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import java.io.Serializable;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 @Builder
 
-public class PmsCategoryResponse {
+public class PmsCategoryRequest {
 
     private Long categoryId;
 

@@ -1,9 +1,6 @@
 package com.quickmall.productservice.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,6 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @ToString
 @Entity
+@Builder
 
 public class PmsBrand implements Serializable {
 

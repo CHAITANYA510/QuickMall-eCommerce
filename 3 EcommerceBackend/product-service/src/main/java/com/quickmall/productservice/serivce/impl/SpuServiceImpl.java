@@ -1,7 +1,7 @@
 package com.quickmall.productservice.serivce.impl;
 
 import com.quickmall.productservice.entity.PmsSpu;
-import com.quickmall.productservice.exception.SpuServiceException;
+import com.quickmall.productservice.exception.BasicServiceException;
 import com.quickmall.productservice.model.PmsSpuRequest;
 import com.quickmall.productservice.model.PmsSpuResponse;
 import com.quickmall.productservice.repository.SpuRepository;
@@ -61,7 +61,7 @@ public class SpuServiceImpl implements SpuService {
     @Override
     public PmsSpuResponse getSpuById(Long spuId) {
         PmsSpu pmsSpu = spuRepository.findById(spuId)
-                .orElseThrow(() -> new SpuServiceException(
+                .orElseThrow(() -> new BasicServiceException(
                         "spu product - " + spuId + " does not exist!",
                         "SPU_PRODUCT_NOT_FOUND"
                 ));
