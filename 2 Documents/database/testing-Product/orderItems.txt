@@ -1,0 +1,134 @@
+[
+    {
+        "orderItemId": 1,
+        "orderId": 1,
+        "orderSn": -6316571958853835231,
+        "skuId": 2,
+        "skuQuantity": null,
+        "spuId": 10,
+        "spuPrice": 790.00,
+        "categoryId": 1,
+        "attributeValueList": "[{\"key\":\"颜色\",\"value\":\"颜色\"},{\"key\":\"容量\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 2,
+        "orderId": 2,
+        "orderSn": 628287518291985242,
+        "skuId": 11,
+        "skuQuantity": 10.00,
+        "spuId": 18,
+        "spuPrice": 7.39,
+        "categoryId": 8,
+        "attributeValueList": "[{\"key\":\"颜色\",\"value\":\"颜色\"},{\"key\":\"容量\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 3,
+        "orderId": 3,
+        "orderSn": 8260380764963688208,
+        "skuId": 11,
+        "skuQuantity": 50.00,
+        "spuId": 18,
+        "spuPrice": 7.39,
+        "categoryId": 8,
+        "attributeValueList": "[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 4,
+        "orderId": 4,
+        "orderSn": -7237734466126489585,
+        "skuId": 8,
+        "skuQuantity": 40.00,
+        "spuId": 16,
+        "spuPrice": 4.39,
+        "categoryId": 6,
+        "attributeValueList": "[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 5,
+        "orderId": 5,
+        "orderSn": 7218089496714775305,
+        "skuId": 8,
+        "skuQuantity": 40.00,
+        "spuId": 16,
+        "spuPrice": 4.39,
+        "categoryId": 6,
+        "attributeValueList": "[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 6,
+        "orderId": 6,
+        "orderSn": -4941418382314259443,
+        "skuId": 8,
+        "skuQuantity": 40.00,
+        "spuId": 16,
+        "spuPrice": 4.39,
+        "categoryId": 6,
+        "attributeValueList": "[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 7,
+        "orderId": 7,
+        "orderSn": 5665664987574030270,
+        "skuId": 2,
+        "skuQuantity": 50.00,
+        "spuId": 10,
+        "spuPrice": 790.39,
+        "categoryId": 1,
+        "attributeValueList": "[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 8,
+        "orderId": 8,
+        "orderSn": -1818689069589802002,
+        "skuId": 2,
+        "skuQuantity": 100.00,
+        "spuId": 10,
+        "spuPrice": 790.39,
+        "categoryId": 1,
+        "attributeValueList": "[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 9,
+        "orderId": 9,
+        "orderSn": 7308963120437848707,
+        "skuId": 2,
+        "skuQuantity": 1.00,
+        "spuId": 10,
+        "spuPrice": 790.39,
+        "categoryId": 1,
+        "attributeValueList": "[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 10,
+        "orderId": 10,
+        "orderSn": 6040848649868252068,
+        "skuId": 8,
+        "skuQuantity": 7.00,
+        "spuId": 16,
+        "spuPrice": null,
+        "categoryId": 1,
+        "attributeValueList": "[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 11,
+        "orderId": 10,
+        "orderSn": 6040848649868252068,
+        "skuId": 8,
+        "skuQuantity": 7.00,
+        "spuId": 16,
+        "spuPrice": null,
+        "categoryId": 1,
+        "attributeValueList": "[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"4G\"}]"
+    },
+    {
+        "orderItemId": 12,
+        "orderId": 10,
+        "orderSn": 6040848649868252068,
+        "skuId": 8,
+        "skuQuantity": 7.00,
+        "spuId": 16,
+        "spuPrice": null,
+        "categoryId": 1,
+        "attributeValueList": "[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"4G\"}]"
+    }
+]
