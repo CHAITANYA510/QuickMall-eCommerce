@@ -1,0 +1,58 @@
+[
+    {
+        "categoryBrandRelationId": 1,
+        "brandId": 1,
+        "categoryId": 9,
+        "brandName": "TEMU",
+        "categoryName": "Fast Fashion"
+    },
+    {
+        "categoryBrandRelationId": 2,
+        "brandId": 2,
+        "categoryId": 9,
+        "brandName": "SHEIN",
+        "categoryName": "Fast Fashion"
+    },
+    {
+        "categoryBrandRelationId": 3,
+        "brandId": 9,
+        "categoryId": 2,
+        "brandName": "ZARA",
+        "categoryName": "Cloth"
+    },
+    {
+        "categoryBrandRelationId": 4,
+        "brandId": 3,
+        "categoryId": 1,
+        "brandName": "APPLE",
+        "categoryName": "IT"
+    },
+    {
+        "categoryBrandRelationId": 5,
+        "brandId": 5,
+        "categoryId": 1,
+        "brandName": "Samsung",
+        "categoryName": "IT"
+    },
+    {
+        "categoryBrandRelationId": 6,
+        "brandId": 8,
+        "categoryId": 1,
+        "brandName": "Oppo",
+        "categoryName": "IT"
+    },
+    {
+        "categoryBrandRelationId": 7,
+        "brandId": 11,
+        "categoryId": 8,
+        "brandName": "Stabucks",
+        "categoryName": "Drinks"
+    },
+    {
+        "categoryBrandRelationId": 8,
+        "brandId": 12,
+        "categoryId": 8,
+        "brandName": "Dunkin",
+        "categoryName": "Drinks"
+    }
+]
