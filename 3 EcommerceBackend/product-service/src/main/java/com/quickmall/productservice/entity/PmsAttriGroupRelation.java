@@ -1,9 +1,6 @@
-package com.quickmall.productservice.model;
+package com.quickmall.productservice.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,15 +12,21 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Entity
+@Builder
 
-public class PmsAttributeGroupRelationResponse {
+public class PmsAttriGroupRelation implements Serializable {
 
+    private static final long serialVersionUID = 1L;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long attributeGroupRelationId;
 
     private Long attributeId;
 
     private Long attributeGroupId;
 
-    private Integer attributeSort;
+//    private Integer attributeSort;
 
 }

@@ -2,10 +2,7 @@ package com.quickmall.productservice.entity;
 
 import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -14,6 +11,8 @@ import java.io.Serializable;
 @AllArgsConstructor
 @ToString
 @Entity
+@Builder
+
 public class PmsSkuAttributeValue implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -30,6 +29,6 @@ public class PmsSkuAttributeValue implements Serializable {
 
     private String attributeValue;
 
-    private Integer attributeSort;
+//    private Integer attributeSort;
 
 }

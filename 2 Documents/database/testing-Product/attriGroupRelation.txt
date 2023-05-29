@@ -1,0 +1,32 @@
+[
+    {
+        "attributeGroupRelationId": 1,
+        "attributeId": 1,
+        "attributeGroupId": 2
+    },
+    {
+        "attributeGroupRelationId": 2,
+        "attributeId": 6,
+        "attributeGroupId": 7
+    },
+    {
+        "attributeGroupRelationId": 3,
+        "attributeId": 2,
+        "attributeGroupId": 8
+    },
+    {
+        "attributeGroupRelationId": 4,
+        "attributeId": 3,
+        "attributeGroupId": 8
+    },
+    {
+        "attributeGroupRelationId": 5,
+        "attributeId": 4,
+        "attributeGroupId": 8
+    },
+    {
+        "attributeGroupRelationId": 6,
+        "attributeId": 5,
+        "attributeGroupId": 8
+    }
+]

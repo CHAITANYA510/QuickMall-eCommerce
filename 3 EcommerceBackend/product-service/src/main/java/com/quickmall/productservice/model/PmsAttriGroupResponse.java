@@ -1,9 +1,6 @@
 package com.quickmall.productservice.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @ToString
 
-public class PmsAttributeGroupResponse {
+public class PmsAttriGroupResponse {
 
     private Long attributeGroupId;
 
@@ -26,8 +23,5 @@ public class PmsAttributeGroupResponse {
     private String description;
 
     private String icon;
-
-    @ElementCollection
-    private List<Long> categoryPath;
 
 }

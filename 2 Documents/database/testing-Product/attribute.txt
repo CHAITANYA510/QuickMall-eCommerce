@@ -1,0 +1,86 @@
+[
+    {
+        "attributeId": 1,
+        "categoryId": 2,
+        "attributeName": "size",
+        "searchType": null,
+        "valueType": null,
+        "icon": null,
+        "valueSelect": "M,X,XL,2XL,3XL,4XL",
+        "attributeType": null,
+        "enable": null,
+        "showDescription": null
+    },
+    {
+        "attributeId": 2,
+        "categoryId": 1,
+        "attributeName": "internet type",
+        "searchType": null,
+        "valueType": null,
+        "icon": null,
+        "valueSelect": "3G,4G,5G,WLAN",
+        "attributeType": null,
+        "enable": null,
+        "showDescription": null
+    },
+    {
+        "attributeId": 3,
+        "categoryId": 1,
+        "attributeName": "operation system",
+        "searchType": null,
+        "valueType": null,
+        "icon": null,
+        "valueSelect": "Android,IOS",
+        "attributeType": null,
+        "enable": null,
+        "showDescription": null
+    },
+    {
+        "attributeId": 4,
+        "categoryId": 1,
+        "attributeName": "capacity",
+        "searchType": null,
+        "valueType": null,
+        "icon": null,
+        "valueSelect": "8G,16G,32G,128G,256G,1T,2T",
+        "attributeType": null,
+        "enable": null,
+        "showDescription": null
+    },
+    {
+        "attributeId": 5,
+        "categoryId": 1,
+        "attributeName": "color",
+        "searchType": null,
+        "valueType": null,
+        "icon": null,
+        "valueSelect": "red, black, pink, golden, green, silver",
+        "attributeType": null,
+        "enable": null,
+        "showDescription": null
+    },
+    {
+        "attributeId": 6,
+        "categoryId": 7,
+        "attributeName": "taste",
+        "searchType": null,
+        "valueType": null,
+        "icon": null,
+        "valueSelect": "spicy,not spicy",
+        "attributeType": null,
+        "enable": null,
+        "showDescription": null
+    },
+    {
+        "attributeId": 7,
+        "categoryId": 8,
+        "attributeName": "drink's capacity",
+        "searchType": null,
+        "valueType": null,
+        "icon": null,
+        "valueSelect": "ground,medium,large,extra large",
+        "attributeType": null,
+        "enable": null,
+        "showDescription": null
+    }
+]
