@@ -1,0 +1,66 @@
+[
+    {
+        "attributeGroupId": 1,
+        "categoryId": 1,
+        "attributeGroupName": "capacity",
+        "sort": null,
+        "description": null,
+        "icon": null
+    },
+    {
+        "attributeGroupId": 2,
+        "categoryId": 1,
+        "attributeGroupName": "camera",
+        "sort": null,
+        "description": null,
+        "icon": null
+    },
+    {
+        "attributeGroupId": 3,
+        "categoryId": 1,
+        "attributeGroupName": "front camera",
+        "sort": null,
+        "description": null,
+        "icon": null
+    },
+    {
+        "attributeGroupId": 4,
+        "categoryId": 2,
+        "attributeGroupName": "OUTER SHELL",
+        "sort": null,
+        "description": null,
+        "icon": null
+    },
+    {
+        "attributeGroupId": 5,
+        "categoryId": 2,
+        "attributeGroupName": "LINING",
+        "sort": null,
+        "description": null,
+        "icon": null
+    },
+    {
+        "attributeGroupId": 6,
+        "categoryId": 7,
+        "attributeGroupName": "Ingredients",
+        "sort": null,
+        "description": null,
+        "icon": null
+    },
+    {
+        "attributeGroupId": 7,
+        "categoryId": 7,
+        "attributeGroupName": "Nutritional Information",
+        "sort": null,
+        "description": null,
+        "icon": null
+    },
+    {
+        "attributeGroupId": 8,
+        "categoryId": 1,
+        "attributeGroupName": "basic attribute",
+        "sort": null,
+        "description": null,
+        "icon": null
+    }
+]

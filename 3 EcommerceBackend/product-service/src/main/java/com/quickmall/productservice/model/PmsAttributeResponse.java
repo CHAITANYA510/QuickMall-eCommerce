@@ -1,10 +1,7 @@
 package com.quickmall.productservice.model;
 
 import com.quickmall.productservice.constant.AttributeType;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
@@ -12,8 +9,6 @@ import lombok.ToString;
 @ToString
 
 public class PmsAttributeResponse {
-
-    private Long attributeId;
 
     private Long categoryId;
 

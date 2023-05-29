@@ -2,13 +2,12 @@ package com.quickmall.productservice.model;
 
 import lombok.*;
 
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
 
-public class PmsSkuAttributeValueResponse {
+public class PmsSkuAttributeValueRequest {
 
     private Long skuAttributeValueId;
 
@@ -20,6 +19,6 @@ public class PmsSkuAttributeValueResponse {
 
     private String attributeValue;
 
-    private Integer attributeSort;
+//    private Integer attributeSort;
 
 }

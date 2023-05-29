@@ -1,0 +1,65 @@
+[
+    {
+        "skuAttributeValueId": 1,
+        "skuId": 2,
+        "attributeId": 3,
+        "attributeName": "operation system",
+        "attributeValue": "IOS"
+    },
+    {
+        "skuAttributeValueId": 2,
+        "skuId": 2,
+        "attributeId": 2,
+        "attributeName": "internet type",
+        "attributeValue": "5G"
+    },
+    {
+        "skuAttributeValueId": 3,
+        "skuId": 2,
+        "attributeId": 4,
+        "attributeName": "capacity",
+        "attributeValue": "128G"
+    },
+    {
+        "skuAttributeValueId": 4,
+        "skuId": 2,
+        "attributeId": 5,
+        "attributeName": "color",
+        "attributeValue": "pink"
+    },
+    {
+        "skuAttributeValueId": 5,
+        "skuId": 11,
+        "attributeId": 7,
+        "attributeName": "drink's capacity",
+        "attributeValue": "extra large"
+    },
+    {
+        "skuAttributeValueId": 6,
+        "skuId": 12,
+        "attributeId": 7,
+        "attributeName": "drink's capacity",
+        "attributeValue": "large"
+    },
+    {
+        "skuAttributeValueId": 7,
+        "skuId": 10,
+        "attributeId": 6,
+        "attributeName": "taste",
+        "attributeValue": "spicy"
+    },
+    {
+        "skuAttributeValueId": 8,
+        "skuId": 9,
+        "attributeId": 6,
+        "attributeName": "taste",
+        "attributeValue": "spicy"
+    },
+    {
+        "skuAttributeValueId": 9,
+        "skuId": 8,
+        "attributeId": 6,
+        "attributeName": "taste",
+        "attributeValue": "not spicy"
+    }
+]
