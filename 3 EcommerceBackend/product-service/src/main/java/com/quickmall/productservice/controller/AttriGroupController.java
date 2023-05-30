@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/attriGroup")
+@RequestMapping("/api/product/v1/attriGroup")
 @RestController
 @Log4j2
 @Api(tags = "AttriGroup")
