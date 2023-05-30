@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/orderItems")
+@RequestMapping("/api/v1/orderService/orderItems")
 @RestController
 @Log4j2
 

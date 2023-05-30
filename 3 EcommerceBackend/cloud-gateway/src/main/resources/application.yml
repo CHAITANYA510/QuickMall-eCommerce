@@ -1,0 +1,16 @@
+
+server:
+  port:9191
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: ORDER_SERVICE
+          uri: lb://ORDER_SERVICE
+          predicates:
+            - Path=/ORDER_SERVICE/**
+
+# just a test

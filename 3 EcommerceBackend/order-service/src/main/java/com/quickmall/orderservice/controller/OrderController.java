@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/orders")
+@RequestMapping("/api/v1/orderService/orders")
 @RestController
 @Log4j2
 
