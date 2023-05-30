@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: QUICKMALL_PRODUCT_SERVICE
+    name: PRODUCT_SERVICE
   datasource:
     url: jdbc:mysql://localhost:3306/QuickMallDB_product
     username: root
