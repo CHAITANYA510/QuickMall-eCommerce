@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/attribute")
+@RequestMapping("/api/product/v1/attribute")
 @RestController
 @Log4j2
 @Api(tags = "AttributeInfo")

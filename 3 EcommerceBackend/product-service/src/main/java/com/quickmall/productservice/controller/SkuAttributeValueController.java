@@ -14,11 +14,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/skuAttriValue")
+@RequestMapping("/api/product/v1/skuAttriValue")
 @RestController
 @Log4j2
 @Api(tags = "SkuAttributeValue")
-
 
 public class SkuAttributeValueController {
 

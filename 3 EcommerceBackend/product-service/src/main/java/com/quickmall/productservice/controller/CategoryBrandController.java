@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping("/api/v1/categoryBrand")
+@RequestMapping("/api/product/v1/categoryBrand")
 @RestController
 @Log4j2
 @Api(tags = "categoryBrand Relation")
