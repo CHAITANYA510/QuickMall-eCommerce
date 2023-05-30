@@ -24,9 +24,9 @@ public class OmsOrderItemRequest {
      */
     private BigDecimal skuQuantity;
 
-    private Long spuId;
+    private BigDecimal skuPrice;
 
-    private BigDecimal spuPrice;
+    private Long spuId;
 
     private Long categoryId;
 
