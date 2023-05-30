@@ -20,14 +20,16 @@ public class OmsOrderItemResponse {
 
     private Long orderSn;
 
-    private Long spuId;
+    private Long skuId;
 
     /**
      * amount of product
      */
-    private BigDecimal spuQuantity;
+    private BigDecimal skuQuantity;
 
-    private BigDecimal spuPrice;
+    private BigDecimal skuPrice;
+
+    private Long spuId;
 
     private Long categoryId;
 
@@ -35,11 +37,8 @@ public class OmsOrderItemResponse {
 
     private String attributeValueList;
 
-    private Long skuId;
-
 //    private BigDecimal skuPrice;
 
 //    private Long skuCode;
-
 
 }
