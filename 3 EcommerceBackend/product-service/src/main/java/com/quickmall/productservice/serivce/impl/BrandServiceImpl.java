@@ -26,12 +26,7 @@ public class BrandServiceImpl implements BrandService {
     public PmsBrandResponse saveBrand(PmsBrandRequest pmsBrandRequest) {
 
         PmsBrand pmsBrand = PmsBrand.builder()
-                .brandId(pmsBrandRequest.getBrandId())
                 .brandName(pmsBrandRequest.getBrandName())
-                .logo(pmsBrandRequest.getLogo())
-                .description(pmsBrandRequest.getDescription())
-                .showStatus(pmsBrandRequest.getShowStatus())
-                .firstLetter(pmsBrandRequest.getFirstLetter())
                 .sort(pmsBrandRequest.getSort())
                 .build();
 

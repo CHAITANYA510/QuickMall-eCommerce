@@ -4,7 +4,6 @@ import com.quickmall.productservice.entity.PmsAttriGroupRelation;
 import com.quickmall.productservice.exception.BasicServiceException;
 import com.quickmall.productservice.model.PmsAttriGroupRelationRequest;
 import com.quickmall.productservice.model.PmsAttriGroupRelationResponse;
-import com.quickmall.productservice.model.PmsAttriGroupResponse;
 import com.quickmall.productservice.repository.AttriGroupRelationRepository;
 import com.quickmall.productservice.serivce.AttriGroupRelationService;
 import lombok.extern.log4j.Log4j2;
@@ -27,9 +26,9 @@ public class AttriGroupRelationServiceImpl implements AttriGroupRelationService 
     public PmsAttriGroupRelationResponse saveAgRelation(PmsAttriGroupRelationRequest agRelationRequest) {
 
         PmsAttriGroupRelation agRelation = PmsAttriGroupRelation.builder()
-                .attributeGroupRelationId(agRelationRequest.getAttributeGroupRelationId())
                 .attributeId(agRelationRequest.getAttributeId())
                 .attributeGroupId(agRelationRequest.getAttributeGroupId())
+                .attributeSort(agRelationRequest.getAttributeSort())
                 .build();
 
         agRelationRepository.save(agRelation);

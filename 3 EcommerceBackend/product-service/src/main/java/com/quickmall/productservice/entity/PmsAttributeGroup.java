@@ -21,17 +21,10 @@ public class PmsAttributeGroup implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long attributeGroupId;
 
-    private Long categoryId;
-
     private String attributeGroupName;
 
+    private Long categoryId;
+
     private Integer sort;
-
-    private String description;
-
-    private String icon;
-
-//    @ElementCollection
-//    private List<Long> categoryPath;
 
 }

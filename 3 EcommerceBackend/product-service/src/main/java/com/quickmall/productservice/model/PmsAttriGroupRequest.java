@@ -2,26 +2,22 @@ package com.quickmall.productservice.model;
 
 import lombok.*;
 
-import javax.persistence.*;
 import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 
 public class PmsAttriGroupRequest implements Serializable {
 
     private Long attributeGroupId;
 
-    private Long categoryId;
-
     private String attributeGroupName;
 
+    private Long categoryId;
+
     private Integer sort;
-
-    private String description;
-
-    private String icon;
 
 }

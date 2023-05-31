@@ -24,14 +24,10 @@ public class CategoryServiceImpl implements CategoryService {
     public PmsCategoryResponse saveCategory(PmsCategoryRequest pmsCategoryRequest) {
 
         PmsCategory category = PmsCategory.builder()
-                .categoryId(pmsCategoryRequest.getCategoryId())
                 .categoryName(pmsCategoryRequest.getCategoryName())
                 .parentId(pmsCategoryRequest.getParentId())
-                .showStatus(pmsCategoryRequest.getShowStatus())
+                .categoryLevel(pmsCategoryRequest.getCategoryLevel())
                 .sort(pmsCategoryRequest.getSort())
-                .icon(pmsCategoryRequest.getIcon())
-                .productUnit(pmsCategoryRequest.getProductUnit())
-                .productCount(pmsCategoryRequest.getProductCount())
                 .build();
 
         categoryRespository.save(category);

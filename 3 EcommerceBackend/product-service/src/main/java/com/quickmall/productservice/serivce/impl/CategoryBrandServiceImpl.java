@@ -25,8 +25,8 @@ public class CategoryBrandServiceImpl implements CategoryBrandService {
 
         PmsCategoryBrandRelation relationEntity = PmsCategoryBrandRelation.builder()
                 .brandId(request.getBrandId())
-                .categoryId(request.getCategoryId())
                 .brandName(request.getBrandName())
+                .categoryId(request.getCategoryId())
                 .categoryName(request.getCategoryName())
                 .build();
 

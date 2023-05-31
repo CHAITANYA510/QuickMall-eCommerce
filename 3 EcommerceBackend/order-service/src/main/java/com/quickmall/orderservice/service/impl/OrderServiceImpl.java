@@ -1,6 +1,7 @@
 package com.quickmall.orderservice.service.impl;
 
 import com.quickmall.orderservice.constant.OrderStatus;
+import com.quickmall.orderservice.constant.ReceiptType;
 import com.quickmall.orderservice.entity.OmsOrder;
 import com.quickmall.orderservice.model.OmsOrderRequest;
 import com.quickmall.orderservice.model.OmsOrderResponse;
@@ -30,7 +31,6 @@ public class OrderServiceImpl implements OrderService {
                 .payAmount(request.getPayAmount())
                 .payType(request.getPayType())
                 .orderStatus(OrderStatus.PREPARING)
-                .receiptType(request.getReceiptType())
                 .note(request.getNote())
                 .orderCreateTime(new Date())
                 .paymentTime(new Date())
@@ -38,8 +38,9 @@ public class OrderServiceImpl implements OrderService {
 //                .isConfirm(request.getIsConfirm())
 //                .deliveredTime(request.getDeliveredTime())
                 .deliveredTime(new Date())
-                .confirmTime(new Date())
                 .isConfirm(1)
+                .confirmTime(new Date())
+                .receiptType(ReceiptType.ONLINE_RECEIPT)
                 .build();
 
         orderRepository.save(order);

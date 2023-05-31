@@ -14,14 +14,6 @@ public class PmsBrandRequest {
 
     private String brandName;
 
-    private String logo;
-
-    private String description;
-
-    private Integer showStatus;
-
-    private String firstLetter;
-
     private Integer sort;
 
 }

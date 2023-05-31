@@ -3,7 +3,6 @@ package com.quickmall.orderservice.service.impl;
 import com.quickmall.orderservice.entity.OmsOrderItem;
 import com.quickmall.orderservice.model.OmsOrderItemRequest;
 import com.quickmall.orderservice.model.OmsOrderItemResponse;
-import com.quickmall.orderservice.model.OmsOrderRequest;
 import com.quickmall.orderservice.repository.OrderItemRepository;
 import com.quickmall.orderservice.service.OrderItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,20 +17,20 @@ public class OrderItemServiceImpl implements OrderItemService {
     @Autowired
     private OrderItemRepository orderItemRepository;
 
-
     @Override
     public OmsOrderItemResponse saveOrderItem(OmsOrderItemRequest request) {
 
         OmsOrderItem orderItem = OmsOrderItem.builder()
                 .orderId(request.getOrderId())
                 .orderSn(request.getOrderSn())
-                .skuId(request.getSkuId())
-                .skuQuantity(request.getSkuQuantity())
-                .skuPrice(request.getSkuPrice())
-                .spuId(request.getSpuId())
                 .categoryId(request.getCategoryId())
-//                .attributeValueList(request.getAttributeValueList())
-                .attributeValueList("[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"capacity\",\"value\":\"5G\"}]")
+                .spuId(request.getSpuId())
+                .spuName(request.getSpuName())
+                .spuBrand(request.getSpuBrand())
+                .skuId(request.getSkuId())
+                .skuPrice(request.getSkuPrice())
+                .skuQuantity(request.getSkuQuantity())
+                .attributeValueList("[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"size\",\"value\":\"XS\"}]")
                 .build();
 
         orderItemRepository.save(orderItem);

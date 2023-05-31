@@ -6,13 +6,13 @@ import com.quickmall.orderservice.constant.ReceiptType;
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.time.Instant;
 import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 
 public class OmsOrderRequest {
 
@@ -34,12 +34,6 @@ public class OmsOrderRequest {
      */
     private OrderStatus orderStatus;
 
-
-    /**
-     * receipt type: no receipt/ text receipt/ emaill receipt
-     */
-    private ReceiptType receiptType;
-
     /**
      * order's extra info; order's notes
      */
@@ -49,24 +43,21 @@ public class OmsOrderRequest {
 
     private Date paymentTime;
 
-    private Date confirmTime;
+    /**
+     * order delivered time
+     */
+    private Date deliveredTime;
 
     /**
      * if order is confirmed: 1 - confirm; 0 - not confirm;
      */
     private Integer isConfirm;
 
-    /**
-     * after 10 days on the way status; the order will be received without user's check
-     */
-//    private Instant autoConfirmTime;
+    private Date confirmTime;
 
     /**
-     * order delivered time
+     * receipt type: online receipt/ text receipt/ emaill receipt
      */
-    private Date deliveredTime;
-
-
-//    private Integer sourceType;
+    private ReceiptType receiptType;
 
 }

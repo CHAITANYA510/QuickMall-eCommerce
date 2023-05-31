@@ -7,6 +7,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 
 public class PmsSkuAttributeValueResponse {
 
@@ -19,7 +20,5 @@ public class PmsSkuAttributeValueResponse {
     private String attributeName;
 
     private String attributeValue;
-
-    private Integer attributeSort;
 
 }

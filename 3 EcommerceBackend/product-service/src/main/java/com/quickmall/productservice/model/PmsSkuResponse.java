@@ -21,15 +21,23 @@ public class PmsSkuResponse {
 
     private Long skuId;
 
-    private Long spuId;
+    private String skuName;
 
-    private Long categoryId;
+    private Long spuId;
 
     private Long brandId;
 
-    private String skuName;
+    private Long categoryId;
 
-    private String skuDescription;
+    private BigDecimal price;
+
+    private Long saleCount;
+
+    /**
+     * the stock number of sku product
+     * new skuStock = old skuStock - sales
+     */
+    private Integer skuStock;
 
     private String skuDefaultImage;
 
@@ -37,21 +45,8 @@ public class PmsSkuResponse {
 
     private String skuSubTitle;
 
-    private BigDecimal price;
-
-    private Long saleCount;
-    /**
-     * the stock number of sku product
-     * new skuStock = old skuStock - sales
-     */
-    private Integer skuStock;
+    private String skuDescription;
 
     private Date createTime;
-
-    /**
-     * sku approved status: APPROVED; DECLINED
-     */
-    private ApprovedStatus skuApproveStatus;
-
 
 }

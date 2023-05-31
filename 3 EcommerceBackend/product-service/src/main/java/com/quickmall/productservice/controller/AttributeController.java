@@ -39,7 +39,7 @@ public class AttributeController {
         return attributeService.getAllAttribute();
     }
 
-    @GetMapping("/{attributeId)")
+    @GetMapping("/{attributeId}")
     public ResponseEntity<PmsAttributeResponse> getAllAttributeById(@PathVariable("attributeId") Long attributeId) {
         var attributeResponse = attributeService.getAttributeById(attributeId);
 
