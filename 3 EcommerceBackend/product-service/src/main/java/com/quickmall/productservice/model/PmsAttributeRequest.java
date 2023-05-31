@@ -7,29 +7,13 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 
 public class PmsAttributeRequest {
 
-    private Long categoryId;
+    private Long attributeId;
 
     private String attributeName;
-
-    /**
-     * 0 - no search; 1 - need search
-     */
-    private Integer searchType;
-
-    /**
-     * 0 - single value; 1 - multiple value
-     */
-    private Integer valueType;
-
-    private String icon;
-
-    /**
-     * value set that can be selected
-     */
-    private String valueSelect;
 
     /**
      * MARKETING_ATTRIBUTE - Emarketing attribute; BASIC_ATTRIBUT - basic attribute
@@ -37,13 +21,10 @@ public class PmsAttributeRequest {
     private AttributeType attributeType;
 
     /**
-     * 0 - forbidden; 1 - enable
+     * value set that can be selected
      */
-    private Integer enable;
+    private String valueSelect;
 
-    /**
-     * 0 - do not display on the intro page; 1 - display
-     */
-    private Integer showDescription;
+    private Long categoryId;
 
 }

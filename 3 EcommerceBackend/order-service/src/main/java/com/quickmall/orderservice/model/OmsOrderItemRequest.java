@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 
 public class OmsOrderItemRequest {
 
@@ -17,25 +18,23 @@ public class OmsOrderItemRequest {
 
     private Long orderSn;
 
+    private Long categoryId;
+
+    private Long spuId;
+
+    private  String spuName;
+
+    private String spuBrand;
+
     private Long skuId;
+
+    private BigDecimal skuPrice;
 
     /**
      * amount of product
      */
     private BigDecimal skuQuantity;
 
-    private BigDecimal skuPrice;
-
-    private Long spuId;
-
-    private Long categoryId;
-
-//    private Long skuAttributeValueId;
-
     private String attributeValueList;
-
-//    private BigDecimal skuPrice;
-
-//    private Long skuCode;
 
 }

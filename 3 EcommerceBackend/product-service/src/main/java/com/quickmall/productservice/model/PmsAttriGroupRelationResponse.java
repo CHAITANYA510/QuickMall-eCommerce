@@ -6,15 +6,16 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 
 public class PmsAttriGroupRelationResponse {
 
     private Long attributeGroupRelationId;
 
-    private Long attributeId;
-
     private Long attributeGroupId;
 
-//    private Integer attributeSort;
+    private Long attributeId;
+
+    private Integer attributeSort;
 
 }

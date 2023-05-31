@@ -4,7 +4,6 @@ import com.quickmall.productservice.entity.PmsSku;
 import com.quickmall.productservice.exception.BasicServiceException;
 import com.quickmall.productservice.model.PmsSkuRequest;
 import com.quickmall.productservice.model.PmsSkuResponse;
-import com.quickmall.productservice.model.PmsSpuResponse;
 import com.quickmall.productservice.repository.SkuRepository;
 import com.quickmall.productservice.serivce.SkuService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,18 +23,18 @@ public class SkuServiceImpl implements SkuService {
     public PmsSkuResponse saveSkuInfo(PmsSkuRequest skuRequest) {
 
         PmsSku pmsSku = PmsSku.builder()
-                .skuId(skuRequest.getSkuId())
-                .spuId(skuRequest.getSpuId())
-                .categoryId(skuRequest.getCategoryId())
-                .brandId(skuRequest.getBrandId())
                 .skuName(skuRequest.getSkuName())
-                .skuDescription(skuRequest.getSkuDescription())
-                .skuTitle(skuRequest.getSkuTitle())
+                .spuId(skuRequest.getSpuId())
+                .brandId(skuRequest.getBrandId())
+                .categoryId(skuRequest.getCategoryId())
                 .price(skuRequest.getPrice())
                 .saleCount(skuRequest.getSaleCount())
                 .skuStock(skuRequest.getSkuStock())
+                .skuDefaultImage("https://developers.google.com/static/shopping-content/images/googlet.png")
+                .skuTitle(skuRequest.getSkuTitle())
+                .skuSubTitle(skuRequest.getSkuSubTitle())
+                .skuDescription(skuRequest.getSkuDescription())
                 .createTime(new Date())
-                .skuApproveStatus(skuRequest.getSkuApproveStatus())
                 .build();
 
         skuRepository.save(pmsSku);

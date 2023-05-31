@@ -25,18 +25,6 @@ public class PmsCategoryResponse {
 
     private Integer categoryLevel;
 
-    private Integer showStatus;
-
     private Integer sort;
-
-    private String icon;
-
-    private String productUnit;
-
-    private Integer productCount;
-
-//    @JsonInclude(value = JsonInclude.Include.NON_EMPTY)
-//    @ElementCollection
-//    private List<PmsCategory> children;
 
 }

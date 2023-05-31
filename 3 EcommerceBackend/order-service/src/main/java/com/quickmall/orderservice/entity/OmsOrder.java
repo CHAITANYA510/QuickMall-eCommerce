@@ -44,12 +44,6 @@ public class OmsOrder {
      */
     private OrderStatus orderStatus;
 
-
-    /**
-     * receipt type: no receipt/ text receipt/ emaill receipt
-     */
-    private ReceiptType receiptType;
-
     /**
      * order's extra info; order's notes
      */
@@ -59,24 +53,21 @@ public class OmsOrder {
 
     private Date paymentTime;
 
-    private Date confirmTime;
+    /**
+     * order delivered time
+     */
+    private Date deliveredTime;
 
     /**
      * if order is confirmed: 1 - confirm; 0 - not confirm;
      */
     private Integer isConfirm;
 
-    /**
-     * after 10 days on the way status; the order will be received without user's check
-     */
-//    private Instant autoConfirmTime;
+    private Date confirmTime;
 
     /**
-     * order delivered time
+     * receipt type: online receipt/ text receipt/ emaill receipt
      */
-    private Date deliveredTime;
-
-
-//    private Integer sourceType;
+    private ReceiptType receiptType;
 
 }

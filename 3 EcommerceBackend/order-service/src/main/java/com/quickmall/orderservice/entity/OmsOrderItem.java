@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.math.BigDecimal;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -28,25 +27,23 @@ public class OmsOrderItem {
 
     private Long orderSn;
 
+    private Long categoryId;
+
+    private Long spuId;
+
+    private  String spuName;
+
+    private String spuBrand;
+
     private Long skuId;
+
+    private BigDecimal skuPrice;
 
     /**
      * amount of product
      */
     private BigDecimal skuQuantity;
 
-    private BigDecimal skuPrice;
-
-    private Long spuId;
-
-    private Long categoryId;
-
-//    private Long skuAttributeValueId;
-
     private String attributeValueList;
-
-//    private BigDecimal skuPrice;
-
-//    private Long skuCode;
 
 }

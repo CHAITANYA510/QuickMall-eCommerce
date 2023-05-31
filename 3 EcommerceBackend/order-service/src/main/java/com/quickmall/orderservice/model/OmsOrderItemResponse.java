@@ -1,9 +1,6 @@
 package com.quickmall.orderservice.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -11,6 +8,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Builder
 
 public class OmsOrderItemResponse {
 
@@ -20,25 +18,23 @@ public class OmsOrderItemResponse {
 
     private Long orderSn;
 
+    private Long categoryId;
+
+    private Long spuId;
+
+    private  String spuName;
+
+    private String spuBrand;
+
     private Long skuId;
+
+    private BigDecimal skuPrice;
 
     /**
      * amount of product
      */
     private BigDecimal skuQuantity;
 
-    private BigDecimal skuPrice;
-
-    private Long spuId;
-
-    private Long categoryId;
-
-//    private Long skuAttributeValueId;
-
     private String attributeValueList;
-
-//    private BigDecimal skuPrice;
-
-//    private Long skuCode;
 
 }

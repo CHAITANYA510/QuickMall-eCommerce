@@ -27,21 +27,13 @@ public class PmsSku implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long skuId;
 
-    private Long spuId;
+    private String skuName;
 
-    private Long categoryId;
+    private Long spuId;
 
     private Long brandId;
 
-    private String skuName;
-
-    private String skuDescription;
-
-    private String skuDefaultImage;
-
-    private String skuTitle;
-
-    private String skuSubTitle;
+    private Long categoryId;
 
     private BigDecimal price;
 
@@ -53,11 +45,19 @@ public class PmsSku implements Serializable {
      */
     private Integer skuStock;
 
+    private String skuDefaultImage;
+
+    private String skuTitle;
+
+    private String skuSubTitle;
+
+    private String skuDescription;
+
     private Date createTime;
 
-    /**
-     * sku approved status: APPROVED; DECLINED
-     */
-    private ApprovedStatus skuApproveStatus;
+//    /**
+//     * sku approved status: APPROVED; DECLINED
+//     */
+//    private ApprovedStatus skuApproveStatus;
 
 }

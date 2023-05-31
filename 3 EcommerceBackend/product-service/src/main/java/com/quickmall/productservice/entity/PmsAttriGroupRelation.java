@@ -23,10 +23,10 @@ public class PmsAttriGroupRelation implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long attributeGroupRelationId;
 
-    private Long attributeId;
-
     private Long attributeGroupId;
 
-//    private Integer attributeSort;
+    private Long attributeId;
+
+    private Integer attributeSort;
 
 }

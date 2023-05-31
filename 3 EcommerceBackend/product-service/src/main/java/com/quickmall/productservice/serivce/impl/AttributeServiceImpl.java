@@ -25,15 +25,10 @@ public class AttributeServiceImpl implements AttributeService {
     public PmsAttributeResponse saveAttribute(PmsAttributeRequest attributeRequest) {
 
         PmsAttribute attribute = PmsAttribute.builder()
-                .categoryId(attributeRequest.getCategoryId())
                 .attributeName(attributeRequest.getAttributeName())
-                .searchType(attributeRequest.getSearchType())
-                .valueType(attributeRequest.getValueType())
-                .icon(attributeRequest.getIcon())
-                .valueSelect(attributeRequest.getValueSelect())
                 .attributeType(attributeRequest.getAttributeType())
-                .enable(attributeRequest.getEnable())
-                .showDescription(attributeRequest.getShowDescription())
+                .valueSelect(attributeRequest.getValueSelect())
+                .categoryId(attributeRequest.getCategoryId())
                 .build();
 
         attributeRepository.save(attribute);
@@ -67,6 +62,8 @@ public class AttributeServiceImpl implements AttributeService {
         PmsAttributeResponse attributeResponse = new PmsAttributeResponse();
 
         copyProperties(attribute, attributeResponse);
+
+        log.info("***attributeResponse: " + attributeResponse);
 
         return attributeResponse;
     }

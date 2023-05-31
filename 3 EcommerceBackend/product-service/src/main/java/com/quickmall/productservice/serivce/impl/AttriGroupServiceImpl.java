@@ -23,12 +23,9 @@ public class AttriGroupServiceImpl implements AttriGroupService {
     public PmsAttriGroupResponse saveAttriGroup(PmsAttriGroupRequest attriGroupRequest) {
 
         PmsAttributeGroup attributeGroup = PmsAttributeGroup.builder()
-                .attributeGroupId(attriGroupRequest.getAttributeGroupId())
-                .categoryId(attriGroupRequest.getCategoryId())
                 .attributeGroupName(attriGroupRequest.getAttributeGroupName())
+                .categoryId(attriGroupRequest.getCategoryId())
                 .sort(attriGroupRequest.getSort())
-                .description(attriGroupRequest.getDescription())
-                .icon(attriGroupRequest.getIcon())
                 .build();
 
         attriGroupRepository.save(attributeGroup);
