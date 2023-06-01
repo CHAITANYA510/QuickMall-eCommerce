@@ -1,6 +1,7 @@
 package com.quickmall.orderservice.service.impl;
 
 import com.quickmall.orderservice.constant.OrderStatus;
+import com.quickmall.orderservice.constant.PayType;
 import com.quickmall.orderservice.constant.ReceiptType;
 import com.quickmall.orderservice.entity.OmsOrder;
 import com.quickmall.orderservice.model.OmsOrderRequest;
@@ -29,7 +30,7 @@ public class OrderServiceImpl implements OrderService {
                 .orderSn(new Random().nextLong())
                 .totalAmount(request.getTotalAmount())
                 .payAmount(request.getPayAmount())
-                .payType(request.getPayType())
+                .payType(PayType.CreditCard)
                 .orderStatus(OrderStatus.PREPARING)
                 .note(request.getNote())
                 .orderCreateTime(new Date())

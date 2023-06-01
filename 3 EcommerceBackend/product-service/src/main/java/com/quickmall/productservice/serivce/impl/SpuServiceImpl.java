@@ -4,8 +4,10 @@ import com.quickmall.productservice.entity.PmsSpu;
 import com.quickmall.productservice.exception.BasicServiceException;
 import com.quickmall.productservice.model.PmsSpuRequest;
 import com.quickmall.productservice.model.PmsSpuResponse;
+import com.quickmall.productservice.repository.SkuRepository;
 import com.quickmall.productservice.repository.SpuRepository;
 import com.quickmall.productservice.serivce.SpuService;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,10 +17,14 @@ import java.util.List;
 import static org.springframework.beans.BeanUtils.copyProperties;
 
 @Service
+@Log4j2
 public class SpuServiceImpl implements SpuService {
 
     @Autowired
     private SpuRepository spuRepository;
+
+    @Autowired
+    private SkuRepository skuRepository;
 
 
     @Override
@@ -59,5 +65,24 @@ public class SpuServiceImpl implements SpuService {
         copyProperties(pmsSpu, pmsSpuResponse);
 
         return pmsSpuResponse;
+    }
+
+    /**
+     * get spu via skuId
+     * @param skuId
+     * @return
+     */
+    @Override
+    public PmsSpuResponse getSpuBySkuId(Long skuId) {
+
+        Long spuId = skuRepository.findById(skuId).get().getSpuId();
+        PmsSpu spu = spuRepository.findById(spuId).get();
+
+        PmsSpuResponse spuResponse = new PmsSpuResponse();
+        copyProperties(spu, spuResponse);
+
+        log.info("Get SpuInfo via SkuId: " + spu);
+
+        return spuResponse;
     }
 }

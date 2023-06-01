@@ -1,6 +1,7 @@
 package com.quickmall.productservice.controller;
 
 import com.quickmall.productservice.entity.PmsSpu;
+import com.quickmall.productservice.model.PmsSkuResponse;
 import com.quickmall.productservice.model.PmsSpuRequest;
 import com.quickmall.productservice.model.PmsSpuResponse;
 import com.quickmall.productservice.serivce.SpuService;
@@ -45,4 +46,13 @@ public class SpuController {
         PmsSpuResponse pmsSpuResponse = spuService.getSpuById(spuId);
         return new ResponseEntity<>(pmsSpuResponse, HttpStatus.ACCEPTED);
     }
+
+    /**
+     * get spuInfo via skuId using SPU table
+     */
+    @GetMapping("/sku/{spuId}")
+    public ResponseEntity<PmsSpuResponse> getSpuBySkuId(@PathVariable("spuId") Long skuId) {
+        return new ResponseEntity<>(spuService.getSpuBySkuId(skuId), HttpStatus.OK);
+    }
+
 }
