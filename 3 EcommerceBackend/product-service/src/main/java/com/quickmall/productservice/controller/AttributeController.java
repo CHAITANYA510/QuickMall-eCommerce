@@ -3,6 +3,7 @@ package com.quickmall.productservice.controller;
 import com.quickmall.productservice.entity.PmsAttribute;
 import com.quickmall.productservice.model.PmsAttributeRequest;
 import com.quickmall.productservice.model.PmsAttributeResponse;
+import com.quickmall.productservice.model.PmsSkuResponse;
 import com.quickmall.productservice.serivce.AttributeService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -13,6 +14,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.ws.rs.Path;
 import java.util.List;
 
 @RequestMapping("/api/product/v1/attribute")
@@ -45,6 +47,5 @@ public class AttributeController {
 
         return new ResponseEntity<>(attributeResponse, HttpStatus.ACCEPTED);
     }
-
 
 }

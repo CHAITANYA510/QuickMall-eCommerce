@@ -1,6 +1,6 @@
 
 server:
-  port:9191
+  port: 9191
 
 spring:
   application:
@@ -8,9 +8,13 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: ORDER_SERVICE
-          uri: lb://ORDER_SERVICE
+        - id: ORDER-SERVICE
+          uri: lb://ORDER-SERVICE
           predicates:
-            - Path=/ORDER_SERVICE/**
+            - Path=/ORDER-SERVICE/**
+        - id: PRODUCT-SERVICE
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/PRODUCT-SERVICE/**
 
 # just a test

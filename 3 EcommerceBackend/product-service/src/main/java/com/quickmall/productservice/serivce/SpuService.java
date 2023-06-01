@@ -13,4 +13,6 @@ public interface SpuService {
     public List<PmsSpu> getAllSpu();
 
     PmsSpuResponse getSpuById(Long spuId);
+
+    PmsSpuResponse getSpuBySkuId(Long skuId);
 }
