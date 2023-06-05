@@ -1,6 +1,6 @@
 package com.quickmall.cartservice.external;
 
-import com.quickmall.cartservice.dto.PmsSkuResponse;
+import com.quickmall.cartservice.model.PmsSkuResponse;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

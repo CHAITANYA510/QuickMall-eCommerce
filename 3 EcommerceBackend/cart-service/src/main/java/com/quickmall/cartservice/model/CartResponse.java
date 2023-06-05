@@ -1,9 +1,8 @@
-package com.quickmall.cartservice.dto;
+package com.quickmall.cartservice.model;
 
 import lombok.*;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -11,7 +10,7 @@ import java.util.List;
 @ToString
 @Builder
 
-public class CartDTO {
+public class CartResponse {
 
     private Long cartId;
 

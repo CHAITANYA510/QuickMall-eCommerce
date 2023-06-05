@@ -1,4 +1,4 @@
-package com.quickmall.cartservice.dto;
+package com.quickmall.cartservice.model;
 
 import lombok.*;
 
