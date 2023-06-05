@@ -9,4 +9,6 @@ public interface CartItemService {
     List<CartItem> getItemsByCartId(String cartKey);
 
     void saveCartItem(CartItemResponse cartItemResponse, String cartKey);
+
+    List<CartItem> getSelectedItems(String cartKey);
 }

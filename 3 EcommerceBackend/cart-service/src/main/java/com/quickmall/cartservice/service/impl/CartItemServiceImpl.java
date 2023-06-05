@@ -16,6 +16,8 @@ import java.math.BigDecimal;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import static org.springframework.beans.BeanUtils.copyProperties;
+
 @Service
 @Log4j2
 
@@ -55,7 +57,7 @@ public class CartItemServiceImpl implements CartItemService {
         BigDecimal price = skuResponse.getPrice();
         BigDecimal totalPrice = price.multiply(BigDecimal.valueOf(count));
 
-        var cartItem = CartItemResponse.builder()
+        CartItem cartItem = CartItem.builder()
                 .skuId(skuId)
                 .count(count)
                 .price(price)
@@ -65,11 +67,28 @@ public class CartItemServiceImpl implements CartItemService {
                 .totalPrice(totalPrice)
                 .build();
 
+        CartItemResponse cartItemResp = new CartItemResponse();
+        copyProperties(cartItem, cartItemResp);
+
         strRedisTemp.boundHashOps(cartKey).put(
-                cartItem.getSkuId().toString(),
-                JSON.toJSONString(cartItem)
+                cartItemResp.getSkuId().toString(),
+                JSON.toJSONString(cartItemResp)
         );
 
         log.info("cartKey:" + cartKey + " cartItem: " + cartItem);
+    }
+
+    @Override
+    public List<CartItem> getSelectedItems(String cartKey) {
+
+        List<CartItem> selectedCartItemList = strRedisTemp.boundHashOps(cartKey)
+                .values()
+                .stream()
+                .map(String::valueOf)
+                .map(json -> JSON.parseObject(json, CartItem.class))
+                .filter(CartItem::isChecked)
+                .collect(Collectors.toList());
+
+        return selectedCartItemList;
     }
 }

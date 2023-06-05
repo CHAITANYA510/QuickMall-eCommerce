@@ -13,16 +13,16 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@Entity
+//@Entity
 @Builder
 
 public class CartItem implements Serializable {
 
-    private static final long serialVersionID = 1L;
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long cartItemId;
+//    private static final long serialVersionID = 1L;
+//
+//    @Id
+//    @GeneratedValue(strategy = GenerationType.AUTO)
+//    private Long cartItemId;
 
     private Long skuId;
 
