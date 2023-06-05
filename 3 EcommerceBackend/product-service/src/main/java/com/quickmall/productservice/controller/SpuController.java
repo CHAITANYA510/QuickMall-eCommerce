@@ -55,4 +55,9 @@ public class SpuController {
         return new ResponseEntity<>(spuService.getSpuBySkuId(skuId), HttpStatus.OK);
     }
 
+    @DeleteMapping("/{spuId}")
+    public void deleteSpuById(@PathVariable("spuId") Long spuId) {
+        spuService.deleteSpuById(spuId);
+    }
+
 }
