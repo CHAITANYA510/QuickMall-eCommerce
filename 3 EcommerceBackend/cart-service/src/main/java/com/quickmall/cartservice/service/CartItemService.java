@@ -11,4 +11,6 @@ public interface CartItemService {
     void saveCartItem(CartItemResponse cartItemResponse, String cartKey);
 
     List<CartItem> getSelectedItems(String cartKey);
+
+    void deleteCartItem(Long skuId, String cartKey);
 }

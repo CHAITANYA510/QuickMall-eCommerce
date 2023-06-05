@@ -47,6 +47,11 @@ public class CartItemServiceImpl implements CartItemService {
         return cartItemList;
     }
 
+    /**
+     * save new item in a Cart
+     * @param cartItemResponse
+     * @param cartKey
+     */
     @Override
     public void saveCartItem(CartItemResponse cartItemResponse, String cartKey) {
         var skuId = cartItemResponse.getSkuId();
@@ -78,6 +83,11 @@ public class CartItemServiceImpl implements CartItemService {
         log.info("cartKey:" + cartKey + " cartItem: " + cartItem);
     }
 
+    /**
+     * list the selected items in the cart
+     * @param cartKey
+     * @return
+     */
     @Override
     public List<CartItem> getSelectedItems(String cartKey) {
 
@@ -90,5 +100,16 @@ public class CartItemServiceImpl implements CartItemService {
                 .collect(Collectors.toList());
 
         return selectedCartItemList;
+    }
+
+    /**
+     * delete items by skuId in a Cart
+     * @param skuId
+     * @param cartKey
+     */
+    @Override
+    public void deleteCartItem(Long skuId, String cartKey) {
+        strRedisTemp.boundHashOps(cartKey).delete(skuId.toString());
+        log.info("Successfully Delete!");
     }
 }

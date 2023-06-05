@@ -39,5 +39,11 @@ public class CartItemController {
         return new ResponseEntity<>(selectedCartItems, HttpStatus.OK);
     }
 
+    @DeleteMapping("/sku/{skuId}")
+    public void deleteCartItem(@PathVariable("skuId") Long skuId, @RequestParam("id") Long cartId) {
+        String cartKey = RedisConstant.CART_PREFIX + cartId;
+        cartItemService.deleteCartItem(skuId, cartKey);
+    }
+
 
 }
