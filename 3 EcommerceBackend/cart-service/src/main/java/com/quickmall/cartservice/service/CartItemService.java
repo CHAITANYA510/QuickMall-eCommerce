@@ -13,4 +13,6 @@ public interface CartItemService {
     List<CartItem> getSelectedItems(String cartKey);
 
     void deleteCartItem(Long skuId, String cartKey);
+
+    void updateCartItem(CartItemResponse cartItemResponse, String cartKey);
 }
