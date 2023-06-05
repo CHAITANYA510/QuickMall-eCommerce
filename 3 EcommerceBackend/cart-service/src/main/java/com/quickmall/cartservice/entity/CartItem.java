@@ -36,4 +36,6 @@ public class CartItem implements Serializable {
 
     private Integer skuStock;
 
+    private BigDecimal totalPrice;
+
 }

@@ -24,4 +24,6 @@ public class CartItemResponse {
 
     private Integer skuStock;
 
+    private BigDecimal totalPrice;
+
 }

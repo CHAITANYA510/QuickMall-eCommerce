@@ -14,6 +14,6 @@ public interface ProductFeignService {
      * @param skuId
      * @return
      */
-    @GetMapping("/{skuId}")
+    @GetMapping("/sku/{skuId}")
     public ResponseEntity<PmsSkuResponse> getSkuById(@PathVariable("skuId") Long skuId);
 }
