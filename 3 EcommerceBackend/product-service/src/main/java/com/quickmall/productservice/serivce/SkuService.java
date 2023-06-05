@@ -13,4 +13,6 @@ public interface SkuService {
     List<PmsSku> getAllSkuInfo();
 
     PmsSkuResponse getSkuById(Long skuId);
+
+    void deleteSpuById(Long skuId);
 }

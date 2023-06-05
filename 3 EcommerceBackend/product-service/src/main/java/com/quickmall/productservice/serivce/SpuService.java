@@ -15,4 +15,6 @@ public interface SpuService {
     PmsSpuResponse getSpuById(Long spuId);
 
     PmsSpuResponse getSpuBySkuId(Long skuId);
+
+    void deleteSpuById(Long spuId);
 }

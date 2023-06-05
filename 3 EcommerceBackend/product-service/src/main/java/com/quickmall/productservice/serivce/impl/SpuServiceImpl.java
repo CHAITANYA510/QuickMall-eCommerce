@@ -85,4 +85,9 @@ public class SpuServiceImpl implements SpuService {
 
         return spuResponse;
     }
+
+    @Override
+    public void deleteSpuById(Long spuId) {
+        spuRepository.deleteById(spuId);
+    }
 }

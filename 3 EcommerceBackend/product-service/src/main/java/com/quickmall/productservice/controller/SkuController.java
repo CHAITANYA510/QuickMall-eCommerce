@@ -43,4 +43,9 @@ public class SkuController {
 
         return new ResponseEntity<>(skuResponse, HttpStatus.ACCEPTED);
     }
+
+    @DeleteMapping("/{skuId}")
+    public void deleteSpuById(@PathVariable("skuId") Long skuId) {
+        skuService.deleteSpuById(skuId);
+    }
 }
