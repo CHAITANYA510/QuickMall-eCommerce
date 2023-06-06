@@ -42,8 +42,8 @@ public class CartItemController {
      * @param cartId
      * @return
      */
-    @GetMapping
-    public ResponseEntity<List<CartItem>> getSelectedItems(@PathParam("cartId") Long cartId) {
+    @GetMapping("/{cartId}")
+    public ResponseEntity<List<CartItem>> getSelectedItems(@PathVariable("cartId") Long cartId) {
         String cartKey = RedisConstant.CART_PREFIX + cartId;
         List<CartItem> selectedCartItems = cartItemService.getSelectedItems(cartKey);
 

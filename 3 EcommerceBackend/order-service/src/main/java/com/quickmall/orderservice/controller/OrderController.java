@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.websocket.server.PathParam;
 import java.util.List;
 
 @RequestMapping("/api/order/v1/orders")
@@ -22,11 +23,20 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+    /**
+     * v0.1 save order without cart : saveOrder()
+     * v0.2 save order by cart : saveOrderByCart()
+     *                           |--- can generate a new order based on the selected items in the cart,
+     *                           |--- do not need to enter the product info in the ORDER-SERVICE like v0.1
+     * @param orderRequest
+     * @param cartId
+     * @return
+     */
     @PostMapping
-    public ResponseEntity<OmsOrderResponse> saveOrder(@RequestBody OmsOrderRequest request) {
-        var respones = orderService.saveOrder(request);
-
-        return new ResponseEntity<>(respones, HttpStatus.CREATED);
+    public ResponseEntity<OmsOrderResponse> saveOrder(@RequestBody OmsOrderRequest orderRequest, @PathParam("cartId") Long cartId) {
+//        var respones = orderService.saveOrder(request);
+        orderService.saveOrderByCart(orderRequest, cartId);
+        return new ResponseEntity<>(null, HttpStatus.CREATED);
     }
 
     @GetMapping

@@ -37,4 +37,6 @@ public class OmsOrderItemResponse {
 
     private String attributeValueList;
 
+    private Integer count;
+
 }
