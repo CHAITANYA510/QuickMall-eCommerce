@@ -4,6 +4,8 @@ import com.quickmall.cartservice.constant.RedisConstant;
 import com.quickmall.cartservice.entity.CartItem;
 import com.quickmall.cartservice.model.CartItemResponse;
 import com.quickmall.cartservice.service.CartItemService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +18,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/cart/v1/cartItems")
 @Log4j2
+@Api("CartItem Info")
 
 public class CartItemController {
 
@@ -29,6 +32,7 @@ public class CartItemController {
      * @return
      */
     @PostMapping
+    @ApiOperation("save the cartItems")
     public ResponseEntity<Void> save(@RequestBody CartItemResponse cartItemResponse,
                                @RequestParam("cartId") Long cartId) {
         String cartKey = RedisConstant.CART_PREFIX + cartId;
@@ -43,6 +47,7 @@ public class CartItemController {
      * @return
      */
     @GetMapping("/{cartId}")
+    @ApiOperation("get the selected CartItems")
     public ResponseEntity<List<CartItem>> getSelectedItems(@PathVariable("cartId") Long cartId) {
         String cartKey = RedisConstant.CART_PREFIX + cartId;
         List<CartItem> selectedCartItems = cartItemService.getSelectedItems(cartKey);
@@ -56,6 +61,7 @@ public class CartItemController {
      * @param cartId
      */
     @DeleteMapping("/sku/{skuId}")
+    @ApiOperation("Delete the Cart Item by skuIdd")
     public void deleteCartItem(@PathVariable("skuId") Long skuId, @RequestParam("id") Long cartId) {
         String cartKey = RedisConstant.CART_PREFIX + cartId;
         cartItemService.deleteCartItem(skuId, cartKey);
@@ -67,6 +73,7 @@ public class CartItemController {
      * @param cartId
      */
     @PutMapping
+    @ApiOperation("update the Cart Item's status: checked & count")
     public void updateCartItem(@RequestBody CartItemResponse cartItemResponse, @RequestParam("cartId") Long cartId) {
         String cartKey = RedisConstant.CART_PREFIX + cartId;
         cartItemService.updateCartItem(cartItemResponse, cartKey);
