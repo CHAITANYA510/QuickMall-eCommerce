@@ -2,6 +2,7 @@ package com.quickmall.orderservice.service.impl;
 
 import com.quickmall.orderservice.entity.OmsOrderItem;
 import com.quickmall.orderservice.external.client.ProductFeignService;
+import com.quickmall.orderservice.model.CartItem;
 import com.quickmall.orderservice.model.OmsOrderItemRequest;
 import com.quickmall.orderservice.model.OmsOrderItemResponse;
 import com.quickmall.orderservice.model.PmsSpuResponse;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Random;
 
 import static org.springframework.beans.BeanUtils.copyProperties;
 
@@ -29,6 +31,42 @@ public class OrderItemServiceImpl implements OrderItemService {
     @Autowired
     private OrderRepository orderRepository;
 
+    /**
+     * convert the selected items in Cart into items' orders
+     * @param cartItem
+     * @return
+     */
+    @Override
+    public OmsOrderItemResponse saveCartItem(CartItem cartItem) {
+
+        var skuId = cartItem.getSkuId();
+
+        OmsOrderItemResponse orderItemResponse = new OmsOrderItemResponse();
+        orderItemResponse.setSkuId(skuId);
+        orderItemResponse.setCount(cartItem.getCount());
+        orderItemResponse.setSkuPrice(cartItem.getPrice());
+
+        /**
+         * get Spu via SkuId;
+         */
+        var spu = productFeignService.getSpuBySkuId(skuId).getBody();
+        orderItemResponse.setSpuId(spu.getSpuId());
+        log.info("SPU Info: " + spu);
+
+        /**
+         * get Sku via SkuId
+         */
+        var sku = productFeignService.getSkuById(skuId).getBody();
+        orderItemResponse.setSkuId(sku.getSkuId());
+
+        return orderItemResponse;
+    }
+
+    /**
+     * save order item without cart v0.1
+     * @param request
+     * @return
+     */
     @Override
     public OmsOrderItemResponse saveOrderItem(OmsOrderItemRequest request) {
 
@@ -87,6 +125,10 @@ public class OrderItemServiceImpl implements OrderItemService {
         return response;
     }
 
+    /**
+     * get all order items
+     * @return
+     */
     @Override
     public List<OmsOrderItem> getAllOrderItems() {
         return orderItemRepository.findAll();

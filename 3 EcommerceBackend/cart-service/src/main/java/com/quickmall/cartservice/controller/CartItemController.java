@@ -22,6 +22,12 @@ public class CartItemController {
     @Autowired
     private CartItemService cartItemService;
 
+    /**
+     * save the cartItems
+     * @param cartItemResponse
+     * @param cartId
+     * @return
+     */
     @PostMapping
     public ResponseEntity<Void> save(@RequestBody CartItemResponse cartItemResponse,
                                @RequestParam("cartId") Long cartId) {
@@ -31,19 +37,39 @@ public class CartItemController {
         return new ResponseEntity<>(null, HttpStatus.OK);
     }
 
-    @GetMapping
-    public ResponseEntity<List<CartItem>> getSelectedItems(@PathParam("cartId") Long cartId) {
+    /**
+     * get the selected CartItems
+     * @param cartId
+     * @return
+     */
+    @GetMapping("/{cartId}")
+    public ResponseEntity<List<CartItem>> getSelectedItems(@PathVariable("cartId") Long cartId) {
         String cartKey = RedisConstant.CART_PREFIX + cartId;
         List<CartItem> selectedCartItems = cartItemService.getSelectedItems(cartKey);
 
         return new ResponseEntity<>(selectedCartItems, HttpStatus.OK);
     }
 
+    /**
+     * Delete the Cart Item by skuIdd
+     * @param skuId
+     * @param cartId
+     */
     @DeleteMapping("/sku/{skuId}")
     public void deleteCartItem(@PathVariable("skuId") Long skuId, @RequestParam("id") Long cartId) {
         String cartKey = RedisConstant.CART_PREFIX + cartId;
         cartItemService.deleteCartItem(skuId, cartKey);
     }
 
+    /**
+     * update the Cart Item's status: isChecked(checked) status & count
+     * @param cartItemResponse
+     * @param cartId
+     */
+    @PutMapping
+    public void updateCartItem(@RequestBody CartItemResponse cartItemResponse, @RequestParam("cartId") Long cartId) {
+        String cartKey = RedisConstant.CART_PREFIX + cartId;
+        cartItemService.updateCartItem(cartItemResponse, cartKey);
+    }
 
 }

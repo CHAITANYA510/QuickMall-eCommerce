@@ -7,6 +7,9 @@ import com.quickmall.orderservice.model.OmsOrderResponse;
 import java.util.List;
 
 public interface OrderService {
+
+    void saveOrderByCart(OmsOrderRequest orderRequest, long cartId);
+    
     OmsOrderResponse saveOrder(OmsOrderRequest request);
 
     List<OmsOrder> getAllOrder();

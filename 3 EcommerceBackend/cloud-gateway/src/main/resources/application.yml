@@ -12,6 +12,10 @@ spring:
           uri: lb://ORDER-SERVICE
           predicates:
             - Path=/ORDER-SERVICE/**
+        - id: CART-SERVICE
+          uri: lb://CART-SERVICE
+          predicates:
+            - Path=/CART-SERVICE/**
         - id: PRODUCT-SERVICE
           uri: lb://PRODUCT-SERVICE
           predicates:

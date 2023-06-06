@@ -58,6 +58,7 @@ public class CartItemServiceImpl implements CartItemService {
         Integer count = cartItemResponse.getCount();
         var skuResponse = productFeignService.getSkuById(skuId).getBody();
         var attributes = "{color: pink; size: X}";
+        var isChecked = false;
         var stock = skuResponse.getSkuStock();
         BigDecimal price = skuResponse.getPrice();
         BigDecimal totalPrice = price.multiply(BigDecimal.valueOf(count));
@@ -67,7 +68,7 @@ public class CartItemServiceImpl implements CartItemService {
                 .count(count)
                 .price(price)
                 .attributes(attributes)
-                .isChecked(true)
+                .isChecked(isChecked)
                 .skuStock(stock)
                 .totalPrice(totalPrice)
                 .build();
@@ -111,5 +112,40 @@ public class CartItemServiceImpl implements CartItemService {
     public void deleteCartItem(Long skuId, String cartKey) {
         strRedisTemp.boundHashOps(cartKey).delete(skuId.toString());
         log.info("Successfully Delete!");
+    }
+
+    /**
+     * save the updates of cartItem
+     * ATTENTION: isChecked in the HTML is "checked" in json
+     * exp:
+     * {
+     *     "skuId": 1,
+     *     "checked": true,
+     *     "count": 99
+     * }
+     * @param cartItemResponse
+     * @param cartKey
+     */
+    @Override
+    public void updateCartItem(CartItemResponse cartItemResponse, String cartKey) {
+
+        // get skuId by cartKey
+        String skuId = cartItemResponse.getSkuId().toString();
+
+        // get CartItem by skuId
+        String json = (String) strRedisTemp.boundHashOps(cartKey).get(skuId);
+        CartItem cartItem = JSON.parseObject(json, CartItem.class);
+
+        // update isChecked status & count nums of sku
+        cartItem.setChecked(cartItemResponse.isChecked());
+        cartItem.setCount(cartItemResponse.getCount());
+
+        // save updated cartItem
+        strRedisTemp.boundHashOps(cartKey).put(
+                cartItem.getSkuId().toString(),
+                JSON.toJSONString(cartItem)
+        );
+
+        log.info("successfully updated cartItem:" + cartItem);
     }
 }

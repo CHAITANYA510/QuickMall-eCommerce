@@ -22,7 +22,7 @@ public class CartResponse {
         private BigDecimal price;
         private String attributes;
         private boolean isChecked;
-        private Integer stock;
+        private Integer skuStock;
     }
 
 }
