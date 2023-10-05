@@ -67,7 +67,7 @@ public class SkuServiceImpl implements SkuService {
     }
 
     @Override
-    public void deleteSpuById(Long skuId) {
+    public void deleteSkuById(Long skuId) {
         skuRepository.deleteById(skuId);
     }
 }

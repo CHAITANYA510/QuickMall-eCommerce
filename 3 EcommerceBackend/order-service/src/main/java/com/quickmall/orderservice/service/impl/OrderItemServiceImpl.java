@@ -62,87 +62,92 @@ public class OrderItemServiceImpl implements OrderItemService {
         return orderItemResponse;
     }
 
-    /**
-     * save order item without cart v0.1
-     * @param request
-     * @return
-     */
-    @Override
-    public OmsOrderItemResponse saveOrderItem(OmsOrderItemRequest request) {
+//    /**
+//     * save order item without cart v0.1
+//     * @param request
+//     * @return
+//     */
+//    @Override
+//    public OmsOrderItemResponse saveOrderItem(OmsOrderItemRequest request) {
+//
+//        log.info("getSkuId: " + request.getSkuId());
+//
+//        /**
+//         * get Spu via SkuId;
+//         */
+//        var spu = productFeignService.getSpuBySkuId(request.getSkuId()).getBody();
+//        log.info("SPU Info: " + spu + "  " + productFeignService.getSpuBySkuId(request.getSkuId()) );
+//
+//        /**
+//         * get Sku via SkuId
+//         */
+//        var sku = productFeignService.getSkuById(request.getSkuId()).getBody();
+//
+//        /**
+//         * get orderSn via orderId
+//         */
+//        Long orderSnNum = orderRepository.findById(request.getOrderId()).get().getOrderSn();
+//
+//        /**
+//         * 1. generate orderItem
+//         */
+//        OmsOrderItem orderItem = OmsOrderItem.builder()
+//                .orderId(request.getOrderId())
+////                .orderSn(request.getOrderSn())
+//                .orderSn(orderSnNum)
+////              // setting spu info
+////                .categoryId(request.getCategoryId())
+////                .spuId(request.getSpuId())
+////                .spuName(request.getSpuName())
+////                .spuBrand(request.getSpuBrand())
+//                .categoryId(spu.getCategoryId())
+//                .spuId(spu.getSpuId())
+//                .spuName(spu.getSpuName())
+//                .spuBrand(spu.getBrandName())
+//                // sku info need to entered by users
+//                .skuId(request.getSkuId())
+////                .skuPrice(request.getSkuPrice()
+//                .skuPrice(sku.getPrice())
+//                .skuQuantity(request.getSkuQuantity())
+//                .attributeValueList("[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"size\",\"value\":\"XS\"}]")
+//                .build();
+//
+//        orderItemRepository.save(orderItem);
+//
+//        OmsOrderItemResponse response = new OmsOrderItemResponse();
+//        copyProperties(orderItem, response);
+//
+//        /**
+//         * 2. change the number of product
+//         */
+//
+//
+//        return response;
+//    }
 
-        log.info("getSkuId: " + request.getSkuId());
+//    /**
+//     * get all order items v1.0
+//     * @return
+//     */
+//    @Override
+//    public List<OmsOrderItem> getAllOrderItems() {
+//        return orderItemRepository.findAll();
+//    }
 
-        /**
-         * get Spu via SkuId;
-         */
-        var spu = productFeignService.getSpuBySkuId(request.getSkuId()).getBody();
-        log.info("SPU Info: " + spu + "  " + productFeignService.getSpuBySkuId(request.getSkuId()) );
-
-        /**
-         * get Sku via SkuId
-         */
-        var sku = productFeignService.getSkuById(request.getSkuId()).getBody();
-
-        /**
-         * get orderSn via orderId
-         */
-        Long orderSnNum = orderRepository.findById(request.getOrderId()).get().getOrderSn();
-
-        /**
-         * 1. generate orderItem
-         */
-        OmsOrderItem orderItem = OmsOrderItem.builder()
-                .orderId(request.getOrderId())
-//                .orderSn(request.getOrderSn())
-                .orderSn(orderSnNum)
-//              // setting spu info
-//                .categoryId(request.getCategoryId())
-//                .spuId(request.getSpuId())
-//                .spuName(request.getSpuName())
-//                .spuBrand(request.getSpuBrand())
-                .categoryId(spu.getCategoryId())
-                .spuId(spu.getSpuId())
-                .spuName(spu.getSpuName())
-                .spuBrand(spu.getBrandName())
-                // sku info need to entered by users
-                .skuId(request.getSkuId())
-//                .skuPrice(request.getSkuPrice()
-                .skuPrice(sku.getPrice())
-                .skuQuantity(request.getSkuQuantity())
-                .attributeValueList("[{\"key\":\"color\",\"value\":\"pink\"},{\"key\":\"size\",\"value\":\"XS\"}]")
-                .build();
-
-        orderItemRepository.save(orderItem);
-
-        OmsOrderItemResponse response = new OmsOrderItemResponse();
-        copyProperties(orderItem, response);
-
-        /**
-         * 2. change the number of product
-         */
-
-
-        return response;
-    }
-
-    /**
-     * get all order items
-     * @return
-     */
-    @Override
-    public List<OmsOrderItem> getAllOrderItems() {
-        return orderItemRepository.findAll();
-    }
-
-    @Override
-    public OmsOrderItemResponse getOrderItemById(Long orderItemId) {
-
-        OmsOrderItem orderItem = orderItemRepository.findById(orderItemId)
-                .orElseThrow(() -> new RuntimeException());
-
-        OmsOrderItemResponse response = new OmsOrderItemResponse();
-        copyProperties(orderItem, response);
-
-        return response;
-    }
+//    /**
+//     * get Order Item By Id v1.0
+//     * @param orderItemId
+//     * @return
+//     */
+//    @Override
+//    public OmsOrderItemResponse getOrderItemById(Long orderItemId) {
+//
+//        OmsOrderItem orderItem = orderItemRepository.findById(orderItemId)
+//                .orElseThrow(() -> new RuntimeException());
+//
+//        OmsOrderItemResponse response = new OmsOrderItemResponse();
+//        copyProperties(orderItem, response);
+//
+//        return response;
+//    }
 }

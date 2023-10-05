@@ -8,6 +8,10 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: PAYMENT-SERVICE
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/PAYMENT-SERVICE/**
         - id: ORDER-SERVICE
           uri: lb://ORDER-SERVICE
           predicates:

@@ -27,7 +27,7 @@ public class OrderController {
     private OrderService orderService;
 
     /**
-     * v0.1 save order without cart : saveOrder()
+     * v0.1 save order without cart : saveOrder() --> OrderItem
      * v0.2 save order by cart : saveOrderByCart()
      *                           |--- can generate a new order based on the selected items in the cart,
      *                           |--- do not need to enter the product info in the ORDER-SERVICE like v0.1

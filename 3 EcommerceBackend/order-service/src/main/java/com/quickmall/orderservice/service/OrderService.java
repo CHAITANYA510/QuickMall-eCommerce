@@ -10,7 +10,7 @@ public interface OrderService {
 
     void saveOrderByCart(OmsOrderRequest orderRequest, long cartId);
     
-    OmsOrderResponse saveOrder(OmsOrderRequest request);
+//    OmsOrderResponse saveOrder(OmsOrderRequest request);
 
     List<OmsOrder> getAllOrder();
 

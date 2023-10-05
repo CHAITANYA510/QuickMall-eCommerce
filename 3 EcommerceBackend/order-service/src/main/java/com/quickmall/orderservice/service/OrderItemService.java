@@ -12,9 +12,9 @@ public interface OrderItemService {
 
     OmsOrderItemResponse saveCartItem(CartItem cartItem);
 
-    OmsOrderItemResponse saveOrderItem(OmsOrderItemRequest request);
+//    OmsOrderItemResponse saveOrderItem(OmsOrderItemRequest request);
 
-    List<OmsOrderItem> getAllOrderItems();
+//    List<OmsOrderItem> getAllOrderItems();
 
-    OmsOrderItemResponse getOrderItemById(Long orderItemId);
+//    OmsOrderItemResponse getOrderItemById(Long orderItemId);
 }
