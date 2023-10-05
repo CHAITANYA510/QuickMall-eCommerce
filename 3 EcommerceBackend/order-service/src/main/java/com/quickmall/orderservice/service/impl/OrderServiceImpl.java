@@ -104,37 +104,37 @@ public class OrderServiceImpl implements OrderService {
 
     }
 
-    /**
-     * submit order (without cart) v0.1
-     * Param: OmsOrderRequest request
-     */
-    @Override
-    public OmsOrderResponse saveOrder(OmsOrderRequest request) {
-        OmsOrder order = OmsOrder.builder()
-                .orderSn(new Random().nextLong())
-                .totalAmount(request.getTotalAmount())
-                .payAmount(request.getPayAmount())
-                .payType(PayType.CreditCard)
-                .orderStatus(OrderStatus.PREPARING)
-                .note(request.getNote())
-                .orderCreateTime(new Date())
-                .paymentTime(new Date())
-//                .confirmTime(request.getConfirmTime())
-//                .isConfirm(request.getIsConfirm())
-//                .deliveredTime(request.getDeliveredTime())
-                .deliveredTime(new Date())
-                .isConfirm(1)
-                .confirmTime(new Date())
-                .receiptType(ReceiptType.ONLINE_RECEIPT)
-                .build();
-
-        orderRepository.save(order);
-
-        OmsOrderResponse response = new OmsOrderResponse();
-        copyProperties(order, response);
-
-        return response;
-    }
+//    /**
+//     * submit order (without cart) v0.1
+//     * Param: OmsOrderRequest request
+//     */
+//    @Override
+//    public OmsOrderResponse saveOrder(OmsOrderRequest request) {
+//        OmsOrder order = OmsOrder.builder()
+//                .orderSn(new Random().nextLong())
+//                .totalAmount(request.getTotalAmount())
+//                .payAmount(request.getPayAmount())
+//                .payType(PayType.CreditCard)
+//                .orderStatus(OrderStatus.PREPARING)
+//                .note(request.getNote())
+//                .orderCreateTime(new Date())
+//                .paymentTime(new Date())
+////                .confirmTime(request.getConfirmTime())
+////                .isConfirm(request.getIsConfirm())
+////                .deliveredTime(request.getDeliveredTime())
+//                .deliveredTime(new Date())
+//                .isConfirm(1)
+//                .confirmTime(new Date())
+//                .receiptType(ReceiptType.ONLINE_RECEIPT)
+//                .build();
+//
+//        orderRepository.save(order);
+//
+//        OmsOrderResponse response = new OmsOrderResponse();
+//        copyProperties(order, response);
+//
+//        return response;
+//    }
 
     @Override
     public List<OmsOrder> getAllOrder() {

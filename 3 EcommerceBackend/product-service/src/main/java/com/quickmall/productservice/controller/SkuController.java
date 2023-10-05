@@ -45,7 +45,7 @@ public class SkuController {
     }
 
     @DeleteMapping("/{skuId}")
-    public void deleteSpuById(@PathVariable("skuId") Long skuId) {
-        skuService.deleteSpuById(skuId);
+    public void deleteSkuById(@PathVariable("skuId") Long skuId) {
+        skuService.deleteSkuById(skuId);
     }
 }
