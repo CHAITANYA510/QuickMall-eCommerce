@@ -6,6 +6,7 @@ import com.quickmall.cartservice.entity.CartItem;
 import com.quickmall.cartservice.external.ProductFeignService;
 import com.quickmall.cartservice.model.CartItemResponse;
 import com.quickmall.cartservice.service.CartItemService;
+import com.quickmall.cartservice.service.CartService;
 import lombok.extern.log4j.Log4j2;
 import lombok.var;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,17 +56,27 @@ public class CartItemServiceImpl implements CartItemService {
     @Override
     public void saveCartItem(CartItemResponse cartItemResponse, String cartKey) {
         var skuId = cartItemResponse.getSkuId();
-        Integer count = cartItemResponse.getCount();
+
+        // check if the item exist in cartList
+        Integer updateAmount = cartItemResponse.getCount();
+        Integer previousCartItemcount = getItemsByCartId(cartKey).stream()
+                .filter(item -> item.getSkuId().equals(skuId))
+                .map(CartItem::getCount)
+                .findFirst()
+                .get();
+
+        Integer updatedCartItemCount = previousCartItemcount + updateAmount;
+
         var skuResponse = productFeignService.getSkuById(skuId).getBody();
         var attributes = "{color: pink; size: X}";
         var isChecked = false;
         var stock = skuResponse.getSkuStock();
         BigDecimal price = skuResponse.getPrice();
-        BigDecimal totalPrice = price.multiply(BigDecimal.valueOf(count));
+        BigDecimal totalPrice = price.multiply(BigDecimal.valueOf(updatedCartItemCount));
 
         CartItem cartItem = CartItem.builder()
                 .skuId(skuId)
-                .count(count)
+                .count(updatedCartItemCount)
                 .price(price)
                 .attributes(attributes)
                 .isChecked(isChecked)
