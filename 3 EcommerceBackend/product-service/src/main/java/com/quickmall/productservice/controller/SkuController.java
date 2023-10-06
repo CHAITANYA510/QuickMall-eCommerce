@@ -48,4 +48,20 @@ public class SkuController {
     public void deleteSkuById(@PathVariable("skuId") Long skuId) {
         skuService.deleteSkuById(skuId);
     }
+
+    /**
+     * reduce the sku stock after a successful payment
+     * @param skuId
+     * @param reductQuantity
+     * @return
+     */
+    @PutMapping("/changeQuantity/{skuId}")
+    //http://localhost:9001/api/product/v1/sku/reduceQuantity/2?reduceQuantity=1
+    public ResponseEntity<Void> reduceQuantity(@PathVariable("skuId") Long skuId,
+                                               @RequestParam Integer reductQuantity) {
+        skuService.reduceQuantity(skuId, reductQuantity);
+
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }
