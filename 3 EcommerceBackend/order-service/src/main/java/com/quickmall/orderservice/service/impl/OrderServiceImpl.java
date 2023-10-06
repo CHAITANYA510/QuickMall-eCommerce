@@ -6,10 +6,9 @@ import com.quickmall.orderservice.constant.ReceiptType;
 import com.quickmall.orderservice.entity.OmsOrder;
 import com.quickmall.orderservice.entity.OmsOrderItem;
 import com.quickmall.orderservice.external.client.CartFeignService;
-import com.quickmall.orderservice.model.CartItem;
-import com.quickmall.orderservice.model.OmsOrderItemResponse;
-import com.quickmall.orderservice.model.OmsOrderRequest;
-import com.quickmall.orderservice.model.OmsOrderResponse;
+import com.quickmall.orderservice.external.client.PaymentFeginService;
+import com.quickmall.orderservice.external.client.ProductFeignService;
+import com.quickmall.orderservice.model.*;
 import com.quickmall.orderservice.repository.OrderRepository;
 import com.quickmall.orderservice.service.OrderItemService;
 import com.quickmall.orderservice.service.OrderService;
@@ -45,6 +44,11 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private StringRedisTemplate strRedisTemp;
 
+    @Autowired
+    private ProductFeignService productFeignService;
+
+    @Autowired
+    private PaymentFeginService paymentFeginService;
 
     /**
      * save order from the selected Item in the Cart
@@ -55,6 +59,8 @@ public class OrderServiceImpl implements OrderService {
 
         // orderSn
         Long orderSn = new Random().nextLong();
+        // referenceNumber
+        String referenceNumber = String.valueOf(new Random().nextLong());
 
         // get order items in cart
         List<CartItem> cartItemList = cartFeignService.getSelectedItems(cartId).getBody();
@@ -91,6 +97,35 @@ public class OrderServiceImpl implements OrderService {
                 .receiptType(ReceiptType.ONLINE_RECEIPT)
                 .build();
 
+        /**
+         * 2. product service -> block product(reduce the quantity)
+         */
+        cartItemList.forEach(skuItem -> productFeignService.reduceQuantity(skuItem.getSkuId(), skuItem.getCount()));
+        log.info("product quantity has been changed!");
+
+        /**
+         * 3. payment-service: make payment
+         */
+        PaymentRequest paymentRequest = PaymentRequest.builder()
+                .orderId(order.getOrderId())
+                .orderSn(order.getOrderSn())
+                .payAmount(order.getPayAmount())
+                .referenceNumber(referenceNumber)
+                .payType(order.getPayType())
+                .build();
+
+        try {
+            paymentFeginService.doPayment(paymentRequest);
+            log.info("Payment DONE SUCCESFULLY!!!!! Order Status: PLACED");
+            order.setOrderStatus(OrderStatus.ON_THE_WAY);
+        } catch (Exception e) {
+            log.error("Error order in the Payment !!!!");
+            order.setOrderStatus(OrderStatus.FAILED);
+        }
+
+        /**
+         * Save Order
+         */
         orderRepository.save(order);
 
         log.info("order:" + order);
@@ -99,9 +134,6 @@ public class OrderServiceImpl implements OrderService {
         copyProperties(order, orderResponse);
 
         log.info("orderResponse:" + orderResponse);
-
-
-
     }
 
 //    /**

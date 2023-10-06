@@ -20,7 +20,12 @@ public enum OrderStatus {
     /**
      * order is delivering on the way
      */
-    ON_THE_WAY(2, "OnTheWay");
+    ON_THE_WAY(2, "OnTheWay"),
+
+    /**
+     * order is failed to be created
+     */
+    FAILED(3, "OrderFailedToBECreated");
 
     private final Integer value;
     private final String text;

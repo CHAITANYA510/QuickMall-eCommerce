@@ -6,6 +6,7 @@ import com.quickmall.productservice.model.PmsSkuRequest;
 import com.quickmall.productservice.model.PmsSkuResponse;
 import com.quickmall.productservice.repository.SkuRepository;
 import com.quickmall.productservice.serivce.SkuService;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +16,7 @@ import java.util.List;
 import static org.springframework.beans.BeanUtils.copyProperties;
 
 @Service
+@Log4j2
 public class SkuServiceImpl implements SkuService {
     @Autowired
     private SkuRepository skuRepository;
@@ -69,5 +71,29 @@ public class SkuServiceImpl implements SkuService {
     @Override
     public void deleteSkuById(Long skuId) {
         skuRepository.deleteById(skuId);
+    }
+
+    @Override
+    public void reduceQuantity(Long skuId, Integer reductQuantity) {
+        PmsSku pmsSku = skuRepository.findById(skuId)
+                .orElseThrow(() -> new BasicServiceException(
+                        "SkuId - " + skuId + "does not exist!",
+                        "SKU_NOT_FOUND"
+                ));
+
+        // throw error if reduceQuantity is higher than sku stock
+        if (pmsSku.getSkuStock() < reductQuantity) {
+            throw new RuntimeException("product does not have sufficient quantity");
+        }
+
+        pmsSku.setSkuStock(pmsSku.getSkuStock() - reductQuantity);
+        pmsSku.setSaleCount(Long.valueOf(reductQuantity));
+
+        skuRepository.save(pmsSku);
+
+        PmsSkuResponse pmsSkuResponse = new PmsSkuResponse();
+        copyProperties(pmsSku, pmsSkuResponse);
+
+        log.info("updated product SKU: " + pmsSku.toString());
     }
 }
