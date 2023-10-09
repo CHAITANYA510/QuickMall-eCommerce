@@ -6,6 +6,8 @@
 
 ### Eureka info: http://localhost:8761/
 
+### Auth-Service(RBAC): [[auth-service](/auth-service/)] 
+
 ### Product-Service: http://localhost:9001/swagger-ui/index.html#/
 
 ### Order-Service: http://localhost:9002/swagger-ui/index.html#/
