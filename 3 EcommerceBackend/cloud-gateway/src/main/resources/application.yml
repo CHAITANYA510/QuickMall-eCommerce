@@ -8,6 +8,10 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: USER-AUTH-SERVICE
+          uri: lb://USER-AUTH-SERVICE
+          predicates:
+            - Path=/USER-AUTH-SERVICE/**
         - id: PAYMENT-SERVICE
           uri: lb://PAYMENT-SERVICE
           predicates:
