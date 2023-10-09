@@ -53,9 +53,8 @@ public class OrderServiceImpl implements OrderService {
     /**
      * save order from the selected Item in the Cart
      * @param orderRequest
-     * @param cartId
      */
-    public void saveOrderByCart(OmsOrderRequest orderRequest, long cartId) {
+    public void saveOrderByCart(OmsOrderRequest orderRequest, String authHeader) {
 
         // orderSn
         Long orderSn = new Random().nextLong();
@@ -63,10 +62,10 @@ public class OrderServiceImpl implements OrderService {
         String referenceNumber = String.valueOf(new Random().nextLong());
 
         // get order items in cart
-        List<CartItem> cartItemList = cartFeignService.getSelectedItems(cartId).getBody();
+        List<CartItem> cartItemList = cartFeignService.getSelectedItems(authHeader).getBody();
         log.info("cartItemList:" + cartItemList);
 
-        List<OmsOrderItemResponse> orderItemList = cartFeignService.getSelectedItems(cartId).getBody()
+        List<OmsOrderItemResponse> orderItemList = cartFeignService.getSelectedItems(authHeader).getBody()
                 .stream()
                 .map(orderItemService::saveCartItem)
                 .collect(Collectors.toList());

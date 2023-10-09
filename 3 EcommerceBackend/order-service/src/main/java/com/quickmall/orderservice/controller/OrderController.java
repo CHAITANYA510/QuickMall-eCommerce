@@ -1,9 +1,12 @@
 package com.quickmall.orderservice.controller;
 
+import com.quickmall.orderservice.constant.JWTConstant;
 import com.quickmall.orderservice.entity.OmsOrder;
 import com.quickmall.orderservice.model.OmsOrderRequest;
 import com.quickmall.orderservice.model.OmsOrderResponse;
 import com.quickmall.orderservice.service.OrderService;
+import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Jwts;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.log4j.Log4j2;
@@ -14,6 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
+import javax.xml.bind.DatatypeConverter;
 import java.util.List;
 
 @RequestMapping("/api/order/v1/orders")
@@ -36,10 +40,12 @@ public class OrderController {
      * @return
      */
     @PostMapping
-    @ApiOperation("save order by cart : saveOrderByCart() v0.2")
-    public ResponseEntity<Void> saveOrder(@RequestBody OmsOrderRequest orderRequest, @PathParam("cartId") Long cartId) {
-//        var respones = orderService.saveOrder(request);
-        orderService.saveOrderByCart(orderRequest, cartId);
+    @ApiOperation("save order by cart : saveOrderByCart() v2.0")
+    public ResponseEntity<Void> saveOrder(@RequestBody OmsOrderRequest orderRequest,
+                                          @RequestHeader(value = "Authorization") String authHeader) {
+
+        // use the authHeader to call feign service(cart-service) method
+        orderService.saveOrderByCart(orderRequest, authHeader);
         return new ResponseEntity<>(null, HttpStatus.CREATED);
     }
 
