@@ -1,11 +1,9 @@
 package com.authsys.SpringSecurity.controller;
 
 import com.authsys.SpringSecurity.external.response.ProductResponse;
-import com.authsys.SpringSecurity.model.UserRegisterRequest;
 import com.authsys.SpringSecurity.model.UserRepresentation;
 import com.authsys.SpringSecurity.model.UserUpdateRequest;
 import com.authsys.SpringSecurity.service.UserService;
-import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -39,6 +37,7 @@ public class UserController {
         return ResponseEntity.ok().build();
     }
 
+    // TODO: check error in deleting
     @DeleteMapping
     @PreAuthorize("hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
     public ResponseEntity<Void> deleteUserByUserName(@RequestParam("username") String username) {
