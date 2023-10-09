@@ -1,4 +1,4 @@
-# This is the QuickMall-Ecommerce Version2.0 Repo.
+# This is the QuickMall-Ecommerce Version2.0 Repo
 
 Please check the **system design doc** [[here](/1%20System%20Analysis%20Diagram/)]
 
