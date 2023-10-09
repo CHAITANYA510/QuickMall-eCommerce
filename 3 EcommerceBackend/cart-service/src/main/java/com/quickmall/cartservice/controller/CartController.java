@@ -33,7 +33,6 @@ public class CartController {
 
     /**
      * get cartItemList
-     * @param cartId
      * @return
      */
     @GetMapping

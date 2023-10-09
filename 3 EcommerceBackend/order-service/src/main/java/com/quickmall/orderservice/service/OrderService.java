@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface OrderService {
 
-    void saveOrderByCart(OmsOrderRequest orderRequest, long cartId);
+    void saveOrderByCart(OmsOrderRequest orderRequest, String authHeader);
     
 //    OmsOrderResponse saveOrder(OmsOrderRequest request);
 

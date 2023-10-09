@@ -29,9 +29,9 @@ public class JwtTokenUtils {
                 .signWith(SECRET_KEY, SignatureAlgorithm.HS256)
                 .claim(SecurityConstants.ROLE_CLAIMS, String.join(",", roles))
                 .setId(id)
-                .setIssuer("SnailClimb")
+                .setIssuer("QuickMall")
                 .setIssuedAt(createdDate)
-                .setSubject(username)
+                .setSubject(id)
                 .setExpiration(expirationDate)
                 .compact();
         return SecurityConstants.TOKEN_PREFIX + tokenPrefix; // 添加 token 前缀 "Bearer ";

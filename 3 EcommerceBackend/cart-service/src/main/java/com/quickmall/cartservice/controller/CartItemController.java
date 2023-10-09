@@ -13,6 +13,7 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import javax.xml.bind.DatatypeConverter;
@@ -65,12 +66,13 @@ public class CartItemController {
 
     /**
      * get the selected CartItems
-     * @param cartId
      * @return
      */
-    @GetMapping("/{cartId}")
+    @GetMapping()
     @ApiOperation("get the selected CartItems")
-    public ResponseEntity<List<CartItem>> getSelectedItems(@RequestHeader(value = "Authorization") String authHeader) {
+    public ResponseEntity<List<CartItem>> getSelectedItems(
+            @RequestHeader(value = "Authorization") String authHeader
+    ) {
         // get token:
         String token = authHeader.replace("Bearer ", "");
         log.info("Token: " + token);
