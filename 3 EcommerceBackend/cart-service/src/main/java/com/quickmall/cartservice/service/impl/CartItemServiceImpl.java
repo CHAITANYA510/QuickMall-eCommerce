@@ -55,28 +55,37 @@ public class CartItemServiceImpl implements CartItemService {
      */
     @Override
     public void saveCartItem(CartItemResponse cartItemResponse, String cartKey) {
+        // get skuId
         var skuId = cartItemResponse.getSkuId();
 
-        // check if the item exist in cartList
+        // get the update amount
         Integer updateAmount = cartItemResponse.getCount();
-        Integer previousCartItemcount = getItemsByCartId(cartKey).stream()
-                .filter(item -> item.getSkuId().equals(skuId))
-                .map(CartItem::getCount)
-                .findFirst()
-                .get();
 
-        Integer updatedCartItemCount = previousCartItemcount + updateAmount;
+        // check if cart is empty
+        List<CartItem> cartItemList = getItemsByCartId(cartKey);
 
+        if (cartItemList != null) {
+            // check if the item exist in cartList
+            Integer previousCartItemcount = cartItemList.stream()
+                    .filter(item -> item.getSkuId().equals(skuId))
+                    .map(CartItem::getCount)
+                    .findFirst()
+                    .orElse(0);  // if not, set previousCartItemcount == 0
+
+            updateAmount += previousCartItemcount;
+        }
+
+        // get product info by skuId using ProductFeignService
         var skuResponse = productFeignService.getSkuById(skuId).getBody();
         var attributes = "{color: pink; size: X}";
         var isChecked = false;
         var stock = skuResponse.getSkuStock();
         BigDecimal price = skuResponse.getPrice();
-        BigDecimal totalPrice = price.multiply(BigDecimal.valueOf(updatedCartItemCount));
+        BigDecimal totalPrice = price.multiply(BigDecimal.valueOf(updateAmount));
 
         CartItem cartItem = CartItem.builder()
                 .skuId(skuId)
-                .count(updatedCartItemCount)
+                .count(updateAmount)
                 .price(price)
                 .attributes(attributes)
                 .isChecked(isChecked)
