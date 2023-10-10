@@ -36,7 +36,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 "http://127.0.0.1:9001",
                 "http://127.0.0.1:9002",
                 "http://127.0.0.1:9003",
-                "http://127.0.0.1:9004"
+                "http://127.0.0.1:9004",
+                "http://127.0.0.1:15672"
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowCredentials(true);
