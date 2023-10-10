@@ -37,7 +37,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 "http://127.0.0.1:9002",
                 "http://127.0.0.1:9003",
                 "http://127.0.0.1:9004",
-                "http://127.0.0.1:15672"
+                "http://127.0.0.1:9016"
+
         ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowCredentials(true);
@@ -66,6 +67,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/api/order/v1/**").permitAll()
                 .antMatchers("/api/cart/v1/**").permitAll()
                 .antMatchers("/api/payment/v1/**").permitAll()
+                .antMatchers("/api/coupon/v1/**").permitAll()
                 // 其他的接口都需要认证后才能请求
                 .anyRequest().authenticated()
                 .and()
