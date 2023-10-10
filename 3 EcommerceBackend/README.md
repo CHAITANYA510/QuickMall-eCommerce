@@ -6,6 +6,8 @@
 
 ### Eureka info: http://localhost:8761/
 
+### Coupon-Service(RabbitMQ): [[coupon-service](/coupon-service/)]
+
 ### Auth-Service(RBAC): [[auth-service](/auth-service/)] 
 
 ### Product-Service: http://localhost:9001/swagger-ui/index.html#/
