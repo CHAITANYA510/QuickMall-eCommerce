@@ -8,6 +8,10 @@ spring:
   cloud:
     gateway:
       routes:
+        - id: COUPON-SERVICE
+          uri: lb://COUPON-SERVICE
+          predicates:
+            - Path=/COUPON-SERVICE/**
         - id: USER-AUTH-SERVICE
           uri: lb://USER-AUTH-SERVICE
           predicates:

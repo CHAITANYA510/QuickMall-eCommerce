@@ -1,4 +1,4 @@
-package com.authsys.SpringSecurity.entity;
+package com.quickmall.couponservice.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,7 +26,7 @@ public class Coupon {
     @Column(name = "discount_amount")
     private BigDecimal discountAmount;
 
-    @Column(name = "is_active", nullable = false)
+    @Column(name = "is_active", nullable = true)
     private Boolean isActive;
 
     @Column(name = "expiry_date")

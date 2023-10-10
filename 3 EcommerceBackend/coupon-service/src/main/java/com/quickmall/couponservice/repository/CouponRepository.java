@@ -1,6 +1,6 @@
-package com.authsys.SpringSecurity.repository;
+package com.quickmall.couponservice.repository;
 
-import com.authsys.SpringSecurity.entity.Coupon;
+import com.quickmall.couponservice.entity.Coupon;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CouponRepository extends JpaRepository<Coupon, Long> {
