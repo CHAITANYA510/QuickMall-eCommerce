@@ -1,6 +1,8 @@
 # Quickmall Scrum Development Plan
 
-Quickmall database:<br>
+| [Database Design](/1%20System%20Analysis%20Diagram/QuickMallDB.xlsx) | [Backend code](/3%20EcommerceBackend/) | [Project Kick-off](https://github.com/coco2023/QuickMall-eCommerce#1-preparation) | [Product Backlog](https://github.com/coco2023/QuickMall-eCommerce#2-product-backlog) | [Sprint Backlog](https://github.com/coco2023/QuickMall-eCommerce#3-sprint-backlog) |
+|---|---|---|---|---|
+
 ![database](/2%20Documents/database.png)
 
 ## 1 Preparation
