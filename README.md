@@ -31,8 +31,8 @@ A single-service structure backed by a unified database.
 
 1.  **Database Design**: Construct a relational schema interconnecting all tables. Ensure efficient querying capabilities and data integrity. 
 2.  **Service Implementation**: Develop a centralized service ensuring: 
-        - CRUD operations for all tables.
-        - Business logic such as cart-to-order transition, payment processing, etc.
+           - CRUD operations for all tables.
+           - Business logic such as cart-to-order transition, payment processing, etc.
 3.  **User Roles Management**: Define clear roles for employees, managers, and customers. Implement relevant permissions. 
 4.  **Integration & Testing**: Thoroughly test all functionalities, particularly focusing on user journey—from product selection to order placement and payment. 
 5.  **Optimization & Deployment**: Refine the code, optimize for performance, and deploy to a production environment. 
