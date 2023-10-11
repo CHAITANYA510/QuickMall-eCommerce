@@ -1,5 +1,8 @@
 # Quickmall Scrum Development Plan
 
+Quickmall database:<br>
+![database](/2%20Documents/database.png)
+
 ## 1 Preparation
 
 -  **Project Vision**: Define the end goals for `quickmall` e-commerce backend. 
