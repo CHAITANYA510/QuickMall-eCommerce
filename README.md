@@ -187,7 +187,6 @@ For each sprint, there will be a clear sprint goal.
    - What can be improved?
    - Actions for improvements.
 
----
 
 ## 4 Wrap-up
 
