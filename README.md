@@ -1,8 +1,9 @@
 # Quickmall Scrum Development Plan
 
-| [Database Design](/1%20System%20Analysis%20Diagram/QuickMallDB.xlsx) | [Backend code](/3%20EcommerceBackend/) | [Project Kick-off](https://github.com/coco2023/QuickMall-eCommerce#1-preparation) | [Product Backlog](https://github.com/coco2023/QuickMall-eCommerce#2-product-backlog) | [Sprint Backlog](https://github.com/coco2023/QuickMall-eCommerce#3-sprint-backlog) |
-|---|---|---|---|---|
+| [DBDesign.xlsx](/1%20System%20Analysis%20Diagram/QuickMallDB.xlsx) | [V2.0 Backend code](/3%20EcommerceBackend/) | [Project Kick-off](https://github.com/coco2023/QuickMall-eCommerce#1-preparation) | [Product Backlog](https://github.com/coco2023/QuickMall-eCommerce#2-product-backlog) | [Sprint Backlog](https://github.com/coco2023/QuickMall-eCommerce#3-sprint-backlog) | [V1.0 Frontend code](https://github.com/coco2023/MyEcommerce-Web-frontend) | [V1.0 Backend code](https://github.com/coco2023/coco2023-MyEcommerce-Web-backend) |
+|---|---|---|---|---|---|---|
 
+database：
 ![database](/2%20Documents/database.png)
 
 #### **Architecture**:
@@ -12,19 +13,26 @@ A single-service structure backed by a unified database.
 #### **Database Tables**:
 
 - **productInfo**: Detailed information about products.
-- **user**: Information on employees, managers, and customers.
+- **supplier**: Stores supplier details and manage product database.
+- **user**: Information on employees, managers, customers and testers.
+- **role**: Implements the RBAC by defining user roles and permissions.
 - **order**: Data on user orders.
 - **ProductInOrder**: Details the products within each order.
 - **cart**: Temporarily stores products users wish to purchase.
 - **ProductCategory**: Classifies products.
 - **payment**: Manages payment data and processes.
+- **coupon**: Captures active coupon details and marketing service.
+- **logistics**: Tracks shipping and delivery details.
+- **seckill**: Oversees products available for limited-time promotional offers.
+- **searchIndex**: An optimized table synchronized with Elasticsearch
+
 
 #### **Development Phases for Version 1**:
 
 1.  **Database Design**: Construct a relational schema interconnecting all tables. Ensure efficient querying capabilities and data integrity. 
 2.  **Service Implementation**: Develop a centralized service ensuring: 
-   - CRUD operations for all tables.
-   - Business logic such as cart-to-order transition, payment processing, etc.
+        - CRUD operations for all tables.
+        - Business logic such as cart-to-order transition, payment processing, etc.
 3.  **User Roles Management**: Define clear roles for employees, managers, and customers. Implement relevant permissions. 
 4.  **Integration & Testing**: Thoroughly test all functionalities, particularly focusing on user journey—from product selection to order placement and payment. 
 5.  **Optimization & Deployment**: Refine the code, optimize for performance, and deploy to a production environment. 
