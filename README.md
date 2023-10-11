@@ -5,9 +5,35 @@
 
 ![database](/2%20Documents/database.png)
 
-## 1 Preparation [return to outline](https://github.com/coco2023/QuickMall-eCommerce#quickmall-scrum-development-plan)
+#### **Architecture**:
 
--  **Project Vision**: Define the end goals for `quickmall` e-commerce backend. 
+A single-service structure backed by a unified database.
+
+#### **Database Tables**:
+
+- **productInfo**: Detailed information about products.
+- **user**: Information on employees, managers, and customers.
+- **order**: Data on user orders.
+- **ProductInOrder**: Details the products within each order.
+- **cart**: Temporarily stores products users wish to purchase.
+- **ProductCategory**: Classifies products.
+- **payment**: Manages payment data and processes.
+
+#### **Development Phases for Version 1**:
+
+1.  **Database Design**: Construct a relational schema interconnecting all tables. Ensure efficient querying capabilities and data integrity. 
+2.  **Service Implementation**: Develop a centralized service ensuring: 
+   - CRUD operations for all tables.
+   - Business logic such as cart-to-order transition, payment processing, etc.
+3.  **User Roles Management**: Define clear roles for employees, managers, and customers. Implement relevant permissions. 
+4.  **Integration & Testing**: Thoroughly test all functionalities, particularly focusing on user journey—from product selection to order placement and payment. 
+5.  **Optimization & Deployment**: Refine the code, optimize for performance, and deploy to a production environment. 
+
+---
+
+## 1 Preparation [[return to outline]](https://github.com/coco2023/QuickMall-eCommerce#quickmall-scrum-development-plan)
+
+-  **Project Vision**: QuickMall V2.0
 -  **Project Kick-off:**
    - **Auth-service**: create user and grant user role permissions (admin, supplier, customer, tester)
    - Strictly establish **product and** **supplier** **databases** according to e-commerce website standards.
@@ -15,12 +41,12 @@
       - Enabled users to effortlessly **add items**, **review cart selections**, **create orders**, **finalize payments**, and **instantly receive purchase receipts**.
    - Implement **coupon messaging system**.
 -  **Environment Setup**: 
-   - Development: springframework:2.7.13-SNAPSHOT; 
-   - Staging: For testing purposes.
-   - Production: For the final live system.
+   - Development: springframework:2.7.13-SNAPSHOT; spring-cloud: 2021.0.7; Java 1.8;
+   - Staging: `dev` branch.
+   - Production: `main` branch.
 -  **Tool Selection**: Tools like **Git** for version control, **JIRA** for task management, **Jenkins** for continuous integration and **AWS** for deployment.
 
-## 2 Product Backlog [return to outline](https://github.com/coco2023/QuickMall-eCommerce#quickmall-scrum-development-plan)
+## 2 Product Backlog [[return to outline]](https://github.com/coco2023/QuickMall-eCommerce#quickmall-scrum-development-plan)
 
 -  **List Features**: Identify and list down features for each service. 
 -  **Prioritize**: Arrange features based on their importance and dependencies. 
@@ -96,7 +122,7 @@
 16. **IMP201**: Research potential integrations with external payment gateways to expand payment options.
 17. **IMP202**: Explore options for a recommendation engine to suggest products to users based on their behavior.
 
-## 3 Sprint Backlog [return to outline](https://github.com/coco2023/QuickMall-eCommerce#quickmall-scrum-development-plan)
+## 3 Sprint Backlog [[return to outline]](https://github.com/coco2023/QuickMall-eCommerce#quickmall-scrum-development-plan)
 
 For each sprint, there will be a clear sprint goal.
 
