@@ -8,7 +8,7 @@ database：**[[Please found the Backend Code Here](https://github.com/coco2023/Q
 
 #### **Architecture**:
 
-A single-service structure backed by a unified database.
+A microservices approach for enhanced scalability and feature-richness.
 
 #### **Database Tables**:
 
