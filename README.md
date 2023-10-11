@@ -5,7 +5,7 @@
 
 ![database](/2%20Documents/database.png)
 
-## 1 Preparation
+## 1 Preparation [return to outline](https://github.com/coco2023/QuickMall-eCommerce#quickmall-scrum-development-plan)
 
 -  **Project Vision**: Define the end goals for `quickmall` e-commerce backend. 
 -  **Project Kick-off:**
@@ -20,7 +20,7 @@
    - Production: For the final live system.
 -  **Tool Selection**: Tools like **Git** for version control, **JIRA** for task management, **Jenkins** for continuous integration and **AWS** for deployment.
 
-## 2 Product Backlog
+## 2 Product Backlog [return to outline](https://github.com/coco2023/QuickMall-eCommerce#quickmall-scrum-development-plan)
 
 -  **List Features**: Identify and list down features for each service. 
 -  **Prioritize**: Arrange features based on their importance and dependencies. 
@@ -96,7 +96,7 @@
 16. **IMP201**: Research potential integrations with external payment gateways to expand payment options.
 17. **IMP202**: Explore options for a recommendation engine to suggest products to users based on their behavior.
 
-## 3 Sprint Backlog
+## 3 Sprint Backlog [return to outline](https://github.com/coco2023/QuickMall-eCommerce#quickmall-scrum-development-plan)
 
 For each sprint, there will be a clear sprint goal.
 
@@ -193,7 +193,7 @@ For each sprint, there will be a clear sprint goal.
    - Actions for improvements.
 
 
-## 4 Wrap-up
+## 4 Wrap-up [return to outline](https://github.com/coco2023/QuickMall-eCommerce#quickmall-scrum-development-plan)
 
 1. **Deployment**: Move the thoroughly tested backend to a production environment.
 2. **Documentation**: Ensure that all services, functionalities, and endpoints are meticulously documented.
