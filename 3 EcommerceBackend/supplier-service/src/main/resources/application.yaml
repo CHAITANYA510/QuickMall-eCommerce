@@ -3,7 +3,7 @@ server:
   port: 9005
 spring:
   application:
-    name: PRODUCT-SERVICE
+    name: SUPPLIER-SERVICE
   datasource:
     url: jdbc:mysql://localhost:3306/QuickMallDB_supplier
     username: root

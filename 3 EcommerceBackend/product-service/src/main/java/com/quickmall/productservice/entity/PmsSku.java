@@ -29,6 +29,11 @@ public class PmsSku implements Serializable {
 
     private String skuName;
 
+    /**
+     * supplierStockId商品库存id, 及商品id, productId
+     */
+    private Long supplierStockId;
+
     private Long spuId;
 
     private Long brandId;

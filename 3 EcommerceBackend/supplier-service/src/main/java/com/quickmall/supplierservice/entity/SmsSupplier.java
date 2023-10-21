@@ -14,7 +14,9 @@ import java.math.BigDecimal;
 @ToString
 @Entity
 @Builder
-
+/**
+ * 供应商
+ */
 public class SmsSupplier {
 
     private static final long serialVersionUID = 1L;
@@ -29,7 +31,7 @@ public class SmsSupplier {
 
     private String email;
 
-    private Long phone;
+    private String phone;
 
     private String bank_details;
 

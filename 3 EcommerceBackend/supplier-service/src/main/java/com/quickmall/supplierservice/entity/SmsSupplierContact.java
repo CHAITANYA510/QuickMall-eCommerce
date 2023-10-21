@@ -13,7 +13,9 @@ import javax.persistence.Id;
 @ToString
 @Entity
 @Builder
-
+/**
+ * 供应商联系方式
+ */
 public class SmsSupplierContact {
 
     private static final long serialVersionUID = 1L;
@@ -30,6 +32,6 @@ public class SmsSupplierContact {
 
     private String email;
 
-    private Long phone;
+    private String phone;
 
 }
