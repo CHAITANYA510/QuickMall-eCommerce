@@ -23,8 +23,6 @@ A microservices approach for enhanced scalability and feature-richness.
 - **payment**: Manages payment data and processes.
 - **coupon**: Captures active coupon details and marketing service.
 - **logistics**: Tracks shipping and delivery details.
-- **seckill**: Oversees products available for limited-time promotional offers.
-- **searchIndex**: An optimized table synchronized with Elasticsearch
 
 
 #### **Development Phases for Version 1**:
