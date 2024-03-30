@@ -22,7 +22,6 @@ A microservices approach for enhanced scalability and feature-richness.
 - **ProductCategory**: Classifies products.
 - **payment**: Manages payment data and processes.
 - **coupon**: Captures active coupon details and marketing service.
-- **logistics**: Tracks shipping and delivery details.
 
 
 #### **Development Phases for Version 1**:
